@@ -67,11 +67,10 @@ export default function TestimonialSection() {
     <section className="py-[4rem] md:py-[7rem] px-4 md:px-8 relative">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <Heading level="h2" align="center" className="mb-4">
-          What Our Customers Say
+          Customers Love Our Recipes
         </Heading>
-        <Text size="medium" className="max-w-2xl mx-auto text-[#F9C000] ">
-          Hear from our happy customers who enjoy our guilt-free, sugar-free
-          sweets made with love.
+        <Text size="medium" className="max-w-2xl mx-auto ">
+          These sweets have transformed my dessert experience!
         </Text>
       </div>
 

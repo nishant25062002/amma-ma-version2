@@ -18,32 +18,34 @@ export default function HeroSection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#00000080] z-10"></div>
+      <div className="absolute inset-0 bg-[#0000004f] z-10"></div>
 
       {/* Content */}
-      <div className="flex flex-col items-center justify-center relative z-20 px-6 text-center gap-[1.9rem] pt-[4.6rem]">
+      <div className="flex flex-col items-center justify-center relative z-20 px-6 text-center pt-[4.6rem]">
         <Heading
           level="h1"
           as="h1"
           align="center"
           color="text-white"
-          className="md:w-[40rem] !font-[400]"
+          className="md:w-[40rem] !font-[400] !text-white"
         >
           Indulge in Guilt-Free South Indian Sweets
         </Heading>
 
-        <Text className="!text-white mt-3 md:w-[46rem]">
+        <Text className="!text-white mt-[1.5rem] md:w-[46rem]">
           Discover the delightful taste of Amma-ma Foods’ sugar-free sweets,
           crafted with the finest dates and dry fruits. Experience a wholesome
           treat that nourishes your body without compromising on flavour.
         </Text>
 
-        <div className="flex gap-4 justify-center">
-          <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition" />
-          <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
+        <div className="flex gap-4 justify-center mt-[2rem]">
+          <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
+            Order Now
+          </Button>
+          {/* <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
             {" "}
             Learn More
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { Laddu } from "@/public";
 
 export default function SubscribeSection() {
   return (
-    <section className="bg-[#FFC06D] py-[4rem] md:py-[7rem] px-[1.25rem]">
+    <section className="bg-[#FDFDFD] py-[4rem] md:py-[7rem] px-[1.25rem]">
       <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden relative">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">

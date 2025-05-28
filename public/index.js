@@ -9,6 +9,9 @@ import Laddu3 from "./assets/laddu-3.jpg";
 import SectionImage from "./assets/section-image.jpg";
 import Logo from "./assets/logo.svg";
 import Tailwind_CSS_logo from "./assets/Tailwind_CSS_logo.png";
+import UserIcon from "./assets/UserIcon.svg";
+import ShieldIcon from "./assets/ShieldIcon.svg";
+import HeartIcon from "./assets/HeartIcon.svg";
 
 export {
   HeroBackground,
@@ -22,4 +25,7 @@ export {
   SectionImage,
   Logo,
   Tailwind_CSS_logo,
+  UserIcon,
+  HeartIcon,
+  ShieldIcon,
 };

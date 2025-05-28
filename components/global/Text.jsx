@@ -6,6 +6,7 @@ const fontSizes = {
   regular: "text-[1rem] leading-[150%]", // 16px
   small: "text-[0.875rem] leading-[150%]", // 14px
   tiny: "text-[0.75rem] leading-[150%]", // 12px
+  micro: "text-[0.5rem] leading-[100%]", // 12px
 };
 
 // const fontWeights = {
@@ -28,8 +29,7 @@ export default function Text({
   size = "regular", // 'large' | 'medium' | 'regular' | 'small' | 'tiny'
   weight = "normal", // 'extrabold' | 'bold' | 'semibold' | 'medium' | 'normal' | 'light'
   align = "left", // 'left' | 'center' | 'right'
-  color = "text-[#000700]", // Tailwind color like 'text-gray-600'
-  className = "", // Extra classes
+  className = "text-[#000700]", // Extra classes
   children,
 }) {
   const sizeClass = fontSizes[size] || fontSizes.regular;
@@ -37,14 +37,7 @@ export default function Text({
   const alignClass = `text-${align}`;
   const fontFamily = fontFamilies[family];
 
-  const classes = [
-    sizeClass,
-    weightClass,
-    fontFamily,
-    color,
-    alignClass,
-    className,
-  ]
+  const classes = [sizeClass, weightClass, fontFamily, alignClass, className]
     .filter(Boolean)
     .join(" ");
 

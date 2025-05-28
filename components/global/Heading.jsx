@@ -56,7 +56,8 @@ export default function Heading({
   family = "protest", // default to Protest Riot
   weight = "normal",
   align = "left",
-  className = "text-[#000700]",
+  colorClass = "text-[#0C4539]",
+  className = "",
   children,
 }) {
   const Tag = as;
@@ -71,6 +72,7 @@ export default function Heading({
     fontWeight,
     fontFamily,
     `text-${align}`,
+    colorClass,
     className,
   ]
     .filter(Boolean)

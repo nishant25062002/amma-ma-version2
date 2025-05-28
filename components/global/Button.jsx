@@ -7,7 +7,8 @@ const Button = ({
   children = "Shop",
   className = "",
   variant = "solid", // 'solid' | 'outline'
-  href = "/contact-us", // configurable path
+  href = "/contact-us",
+  secondary = false,
 }) => {
   const router = useRouter();
 
@@ -20,9 +21,10 @@ const Button = ({
     "font-inter font-[500] px-6 py-2 h-[40px] text-sm min-w-[5.2rem] rounded-[0.75rem] transition flex items-center justify-center cursor-pointer";
 
   const variants = {
-    solid: "bg-[#F9C000] text-white",
-    outline:
-      "border-[2px] border-[#F9C000] text-[#F9C000] bg-transparent hover:bg-[#F9C000]/10",
+    solid: secondary ? "bg-[#0C4539] text-white" : "bg-[#F9C000] text-white",
+    outline: secondary
+      ? "border-[2px] border-[#0C4539] text-[#0C4539] bg-transparent hover:bg-[#0C4539]/10"
+      : "border-[2px] border-[#F9C000] text-[#F9C000] bg-transparent hover:bg-[#F9C000]/10",
   };
 
   return (

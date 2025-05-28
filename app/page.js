@@ -10,33 +10,32 @@ import {
   SubscribeSection,
   Footer,
 } from "@/components";
+import HeroFeature from "@/components/home/HeroFeature";
+import WhyUsSection from "@/components/home/WhyUsSection";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <BrandGrid />
-      <FeatureSection />
-
-      {/* HeroFeatureSection */}
-      <div className="py-[5rem] space-y-[5rem] bg-[#FFC06D]">
-        <HeroFeatureSection />
-        <HeroFeatureSection className="md:!flex-row-reverse" />
-      </div>
-
-      {/* CtaSection */}
-      <CtaSection />
-
+      {/*  This section is not present in present version*/}
+      {/* <BrandGrid /> */}
+      {/*  This section is new in present version*/}
+      <WhyUsSection />
       {/* ProductsSection */}
       <ProductsSection />
-
       {/* TestimonialSection */}
       <TestimonialSection />
 
+      {/* HeroFeature */}
+      <HeroFeature />
+
+      {/* <FeatureSection /> */}
+
+      {/* CtaSection */}
+      <CtaSection />
       {/* SubscribeSection */}
       <SubscribeSection />
-
       {/* Footer */}
       <Footer />
     </>

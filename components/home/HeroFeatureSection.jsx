@@ -4,20 +4,22 @@ import Image from "next/image";
 import { Button, Heading, Text } from "..";
 import { SectionImage } from "@/public";
 
-export default function HeroFeatureSection({ className = "" }) {
+export default function HeroFeatureSection({
+  className = "",
+  mainClass,
+  title,
+  heading,
+  desc,
+}) {
   return (
-    <section className="px-4 md:px-8 bg-[#FFC06D]">
+    <section className={mainClass}>
       <div
-        className={`max-width-1200 flex flex-col md:flex-row items-center gap-[3rem] md:gap-[5rem] ${className}`}
+        className={`max-width-1200 flex flex-col md:flex-row items-center gap-[3rem] md:gap-[5rem] px-4 md:px-8 py-[7rem] ${className}`}
       >
         {/* Text Content */}
         <div className="md:min-w-[38.5rem]">
-          <Text
-            size="regular"
-            weight="semibold"
-            className="text-[#000700] mb-[1rem]"
-          >
-            Tagline
+          <Text size="regular" weight="semibold" className="mb-[1rem]">
+            {title}
           </Text>
 
           <Heading
@@ -25,13 +27,11 @@ export default function HeroFeatureSection({ className = "" }) {
             align="left"
             className="mb-[1.25rem] md:mb-[1.5rem]"
           >
-            Medium length section heading goes here
+            {heading}
           </Heading>
 
           <Text size="medium" className="mb-[1.5rem] md:mb-[2.5rem]">
-            {`Discover the delightful taste of our handcrafted sweets, made with
-            natural ingredients. Experience guilt-free indulgence that’s perfect
-            for any occasion!`}
+            {desc}
           </Text>
 
           <div className="flex justify-start">
@@ -42,7 +42,7 @@ export default function HeroFeatureSection({ className = "" }) {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full h-[375px] md:h-[640px] rounded-xl overflow-hidden">
+        <div className="relative w-full h-[375px] md:h-[500px] rounded-xl overflow-hidden">
           <Image
             src={SectionImage}
             alt="Handcrafted sweets"
@@ -50,6 +50,7 @@ export default function HeroFeatureSection({ className = "" }) {
             className="object-cover"
           />
         </div>
+        {/* </div> */}
       </div>
     </section>
   );

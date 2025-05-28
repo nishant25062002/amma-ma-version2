@@ -35,19 +35,17 @@ export default function TestimonialCardV2({
   avatar = "/images/avatar-placeholder.png",
 }) {
   return (
-    <div className="rounded-2xl border-[2px] border-black p-[2rem] max-w-md w-full mx-auto min-h-[19rem] flex flex-col justify-between">
+    <div className="rounded-2xl border-[2px] border-black p-[2rem] max-w-md w-full mx-auto min-h-[15rem] flex flex-col justify-between">
       {/* Stars */}
       <div>
-        <div className="flex gap-1 text-[#F9C000] text-xl mb-4">
+        <div className="flex gap-1 text-[#F9C000] text-lg mb-4">
           {[...Array(rating)].map((_, i) => (
             <FaStar key={i} />
           ))}
         </div>
 
         {/* Quote */}
-        <Text size="medium" className="mb-[1.5rem] leading-relaxed">
-          “{content}”
-        </Text>
+        <Text className="mb-[1.5rem] leading-relaxed">“{content}”</Text>
       </div>
 
       {/* Author */}

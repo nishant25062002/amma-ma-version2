@@ -86,13 +86,13 @@ const Navbar = () => {
             </div>
           ))}
           <div className="md:hidden">
-            <Button />
+            <Button variant="outline" />
           </div>
         </div>
 
         {/* User and Button */}
         <div className="md:flex items-center gap-4 hidden">
-          <Button />
+          <Button variant="outline"> Shop Now </Button>
         </div>
       </div>
     </nav>
