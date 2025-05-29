@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, HeroFeatureSection } from "..";
+import { HeroFeatureSection } from "..";
 
 const HeroFeature = () => {
   const data = [
@@ -19,13 +19,14 @@ const HeroFeature = () => {
       desc: `At Amma-ma Foods, every sweet is lovingly handmade to preserve its authentic essence. Our commitment to traditional methods ensures that each bite reflects our rich heritage.`,
     },
   ];
+
   return (
-    <div className="flex flex-col py-[5rem] bg-[#FFC06D]">
+    <div className="flex flex-col py-[1rem] md:py-[2rem] bg-[#FFC06D]">
       {data.map((data, index) => (
         <HeroFeatureSection
           key={index}
           mainClass={index % 2 ? "bg-[#fff]" : "bg-[#FFC06D]"}
-          className={`flex ${index % 2 ? "!flex-row-reverse" : ""}`}
+          className={`flex ${index % 2 ? "flex md:!flex-row-reverse" : ""}`}
           {...data}
         />
       ))}

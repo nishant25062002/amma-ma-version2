@@ -15,15 +15,15 @@ const AnimatedMenuIcon = ({ isOpen = false, setIsOpen }) => {
       className="relative w-7 h-5 flex flex-col justify-between items-end group md:hidden"
     >
       <span
-        className={`block h-[2px] w-full bg-black rounded-sm transform transition duration-300 ease-in-out 
+        className={`block h-[2px] w-full bg-[#fff] rounded-sm transform transition duration-300 ease-in-out 
         ${isOpen ? "rotate-45 translate-y-2" : ""}`}
       ></span>
       <span
-        className={`block h-[2px] w-2/3 bg-black rounded-sm transition duration-300 ease-in-out 
+        className={`block h-[2px] w-2/3 bg-[#fff] rounded-sm transition duration-300 ease-in-out 
         ${isOpen ? "opacity-0" : ""}`}
       ></span>
       <span
-        className={`block h-[2px] w-full bg-black rounded-sm transform transition duration-300 ease-in-out 
+        className={`block h-[2px] w-full bg-[#fff] rounded-sm transform transition duration-300 ease-in-out 
         ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
       ></span>
     </button>

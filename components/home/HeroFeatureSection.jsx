@@ -12,9 +12,9 @@ export default function HeroFeatureSection({
   desc,
 }) {
   return (
-    <section className={mainClass}>
+    <section className={"flex flex-col py-[3rem] md:py-[5rem] " + mainClass}>
       <div
-        className={`max-width-1200 flex flex-col md:flex-row items-center gap-[3rem] md:gap-[5rem] px-4 md:px-8 py-[7rem] ${className}`}
+        className={`max-width-1200 flex flex-col md:flex-row items-center px-4 md:px-8 gap-[3rem] md:gap-[5rem] ${className}`}
       >
         {/* Text Content */}
         <div className="md:min-w-[38.5rem]">
@@ -42,7 +42,7 @@ export default function HeroFeatureSection({
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full h-[375px] md:h-[500px] rounded-xl overflow-hidden">
+        <div className="relative w-full h-[305px] md:h-[500px] rounded-xl overflow-hidden">
           <Image
             src={SectionImage}
             alt="Handcrafted sweets"

@@ -21,7 +21,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[#0000004f] z-10"></div>
 
       {/* Content */}
-      <div className="flex flex-col items-center justify-center relative z-20 px-6 text-center pt-[4.6rem]">
+      <div className="flex flex-col items-center justify-center relative z-20 px-6 md:px-0 text-center md:pt-[4.6rem]">
         <Heading
           level="h1"
           as="h1"
@@ -33,9 +33,9 @@ export default function HeroSection() {
         </Heading>
 
         <Text className="!text-white mt-[1.5rem] md:w-[46rem]">
-          Discover the delightful taste of Amma-ma Foods’ sugar-free sweets,
+          {`Discover the delightful taste of Amma-ma Foods’ sugar-free sweets,
           crafted with the finest dates and dry fruits. Experience a wholesome
-          treat that nourishes your body without compromising on flavour.
+          treat that nourishes your body without compromising on flavour.`}
         </Text>
 
         <div className="flex gap-4 justify-center mt-[2rem]">

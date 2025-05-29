@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function WhyUsSection() {
   return (
-    <section className="py-[7rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col gap-[5rem]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <section className=" py-[4rem] md:py-[7rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col gap-[3rem] md:gap-[5rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
         {/* Left Side */}
         <div>
           <Text weight="semibold" className="mb-[1rem] text-[#FFBF00]">
@@ -33,8 +33,8 @@ export default function WhyUsSection() {
       </div>
 
       {/* Icons + Reasons */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        <div className="flex flex-col gap-[1.5rem]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3rem]">
+        <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
             <Image src={HeartIcon} width={30} height={30} />{" "}
           </div>
@@ -48,7 +48,7 @@ export default function WhyUsSection() {
           </Text>
         </div>
 
-        <div className="flex flex-col gap-[1.5rem]">
+        <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
             <Image src={ShieldIcon} width={30} height={30} />
           </div>
@@ -60,7 +60,7 @@ export default function WhyUsSection() {
           <Text>Experience the rich nutritional benefits in every bite.</Text>
         </div>
 
-        <div className="flex flex-col gap-[1.5rem]">
+        <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
             <Image src={UserIcon} width={30} height={30} />
           </div>
