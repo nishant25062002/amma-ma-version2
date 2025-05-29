@@ -45,7 +45,7 @@ export default function ProductCard({
         </Text>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between min-h-[6rem] md:min-h-0">
         <div>
           <Heading
             level="h6"

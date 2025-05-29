@@ -59,9 +59,9 @@ const Navbar = () => {
         <div
           className={`${
             isOpen
-              ? "max-h-[600px] opacity-100 w-full space-y-6"
+              ? "max-h-[600px] opacity-100 w-full space-y-6 bg-[#fff] text-[#000700] transition-all duration-700 ease-in-out"
               : "max-h-0 opacity-0 w-full"
-          } overflow-hidden transition-all duration-700 ease-in-out gap-6 absolute top-full left-0 flex-col px-6 py-4 md:py-0 md:max-h-fit items-start shadow-md z-10 md:w-fit md:space-x-0 md:opacity-100 md:static md:flex md:flex-row md:items-center md:shadow-none`}
+          } overflow-hidden gap-6 absolute top-full left-0 flex-col px-6 py-4 md:py-0 md:max-h-fit items-start shadow-md z-10 md:w-fit md:space-x-0 md:opacity-100 md:static md:flex md:flex-row md:items-center md:shadow-none`}
         >
           {navData.map((data, index) => (
             <div
@@ -69,7 +69,7 @@ const Navbar = () => {
               className="flex flex-col md:flex-row md:items-center md:justify-center md:h-full z-100"
             >
               <button
-                className={`font-inter text-[#FDFDFD] hover:text-[#F9C000] flex items-center gap-1 cursor-pointer ${
+                className={`font-inter text-[#0C4539] md:text-[#FDFDFD] hover:text-[#F9C000] flex items-center gap-1 cursor-pointer ${
                   pathname.startsWith(data.path) ? "!text-[#F9C000]" : ""
                 }`}
                 onClick={() => handleRedirect(data.path)}

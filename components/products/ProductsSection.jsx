@@ -103,9 +103,9 @@ export default function ProductsSection() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-[2rem] md:mt-[5rem]">
-        <Button variant="outline">Shop Now</Button>
-      </div>
+      {/* <div className="flex justify-center mt-[4rem] md:mt-[5rem]">
+        <Button variant="solid">Shop Now</Button>
+      </div> */}
     </section>
   );
 }
