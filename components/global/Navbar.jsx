@@ -41,8 +41,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full p-4 bg-[#0C4539] border-b border-[#0a392f] border-solid z-100 max-h-[4.6rem]">
-      <div className="flex items-center justify-between max-width-1300">
+    <nav className="absolute top-0 left-0 w-full p-4 bg-[#0C4539] border-b border-[#0a392f] border-solid z-100 !h-[4.6rem]">
+      <div className="flex items-center justify-between max-width-1300 h-full">
         {/* Logo */}
         <div
           className="relative w-14 h-6 md:w-20 md:h-8 cursor-pointer"
@@ -70,7 +70,10 @@ const Navbar = () => {
             >
               <button
                 className={`font-inter text-[#0C4539] md:text-[#FDFDFD] hover:text-[#F9C000] flex items-center gap-1 cursor-pointer ${
-                  pathname.startsWith(data.path) ? "!text-[#F9C000]" : ""
+                  pathname === data.path ||
+                  (pathname.startsWith(data.path) && data.path !== "/")
+                    ? "!text-[#F9C000]"
+                    : ""
                 }`}
                 onClick={() => handleRedirect(data.path)}
               >
@@ -78,7 +81,8 @@ const Navbar = () => {
               </button>
               <div
                 className={`hidden md:block absolute bottom-[-1px] rounded-4xl w-20 h-[2px] transition-all z-100 ${
-                  pathname.startsWith(data.path)
+                  pathname === data.path ||
+                  (pathname.startsWith(data.path) && data.path !== "/")
                     ? "bg-[#F9C000]"
                     : "bg-transparent"
                 }`}

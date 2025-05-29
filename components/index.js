@@ -14,6 +14,8 @@ export { default as FeatureSection } from "./home/FeatureSection";
 export { default as HeroFeatureSection } from "./home/HeroFeatureSection";
 export { default as TestimonialCard } from "./home/TestimonialCard";
 export { default as TestimonialSection } from "./home/TestimonialSection";
+export { default as HeroFeature } from "./home/HeroFeature";
+export { default as WhyUsSection } from "./home/WhyUsSection";
 
 // Products Components
 export { default as ProductCard } from "./products/ProductCard";

@@ -1,39 +1,37 @@
 import {
-  Hero,
   Navbar,
-  CtaSection,
   ProductsSection,
   TestimonialSection,
   SubscribeSection,
   Footer,
-  HeroFeature,
   WhyUsSection,
 } from "@/components";
 
-export default function Home() {
+export default function ProductsPage() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <div className="h-[4.6rem]" />
+      {/* <Hero /> */}
       {/*  This section is not present in present version*/}
       {/* <BrandGrid /> */}
+
+      {/* ProductsSection */}
+      <ProductsSection />
 
       {/*  This section is new in present version*/}
       <WhyUsSection />
 
-      {/* ProductsSection */}
-      <ProductsSection />
       {/* TestimonialSection */}
-
       <TestimonialSection />
 
       {/* HeroFeature */}
-      <HeroFeature />
+      {/* <HeroFeature /> */}
 
       {/* <FeatureSection /> */}
 
       {/* CtaSection */}
-      <CtaSection />
+      {/* <CtaSection /> */}
 
       {/* SubscribeSection */}
       <SubscribeSection />
