@@ -61,7 +61,7 @@ const Navbar = () => {
             isOpen
               ? "max-h-[600px] opacity-100 w-full space-y-6 bg-[#fff] text-[#000700] transition-all duration-700 ease-in-out"
               : "max-h-0 opacity-0 w-full"
-          } overflow-hidden gap-6 absolute top-full left-0 flex-col px-6 py-4 md:py-0 md:max-h-fit items-start shadow-md z-10 md:w-fit md:space-x-0 md:opacity-100 md:static md:flex md:flex-row md:items-center md:shadow-none`}
+          } overflow-hidden gap-6 absolute top-full left-0 flex-col px-6 py-[2rem] md:py-0 md:max-h-fit items-start shadow-md z-10 md:w-fit md:space-x-0 md:opacity-100 md:static md:flex md:flex-row md:items-center md:shadow-none`}
         >
           {navData.map((data, index) => (
             <div
