@@ -1,6 +1,6 @@
 export const navData = [
   {
-    tab: "Home Page",
+    tab: "Home",
     path: "/",
   },
   {
@@ -8,12 +8,12 @@ export const navData = [
     path: "/our-story",
   },
   {
-    tab: "Shop Now",
-    path: "/shop-now",
+    tab: "Our Products",
+    path: "/products",
   },
   {
-    tab: "More Info",
-    path: "/more-info",
+    tab: "Contact Us",
+    path: "/contact-us",
   },
 ];
 
