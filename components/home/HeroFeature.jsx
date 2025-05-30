@@ -26,16 +26,10 @@ const HeroFeature = () => {
         <HeroFeatureSection
           key={index}
           mainClass={index % 2 ? "bg-[#fff]" : "bg-[#FFC06D]"}
-          className={`flex ${index % 2 ? "flex md:!flex-row-reverse" : ""}`}
+          reverse={index % 2}
           {...data}
         />
       ))}
-      {/* <HeroFeatureSection mainClass="bg-[#FFC06D]" />
-      <HeroFeatureSection
-        className="flex md:!flex-row-reverse"
-        mainClass="bg-[#fff]"
-      />
-      <HeroFeatureSection mainClass="bg-[#FFC06D]" /> */}
     </div>
   );
 };

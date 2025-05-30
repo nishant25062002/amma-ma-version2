@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Heading from "../global/Heading";
 import Button from "../global/Button";
 import { HeroBackground } from "@/public";
 import { Text } from "..";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -11,17 +14,23 @@ export default function HeroSection() {
       <Image
         src={HeroBackground}
         alt="Background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover z-0"
         quality={100}
-        className="z-0"
+        priority
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#0000004f] z-10"></div>
 
       {/* Content */}
-      <div className="flex flex-col items-center justify-center relative z-20 px-6 md:px-0 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center justify-center relative z-20 px-6 md:px-0 text-center"
+      >
         <Heading
           level="h1"
           as="h1"
@@ -38,16 +47,23 @@ export default function HeroSection() {
           treat that nourishes your body without compromising on flavour.`}
         </Text>
 
-        <div className="flex gap-4 justify-center mt-[2rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex gap-4 justify-center mt-[2rem]"
+        >
           <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
             Order Now
           </Button>
+
+          {/* Optional secondary button */}
           {/* <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
-            {" "}
             Learn More
           </Button> */}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
