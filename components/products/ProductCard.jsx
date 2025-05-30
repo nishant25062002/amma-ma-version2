@@ -67,7 +67,7 @@ export default function ProductCard({
           weight="semibold"
           className="text-[#FDFDFD] group-hover:text-[#F9C000]"
         >
-          ${price}
+          £{price}
         </Text>
       </div>
       <Button variant="outline" className="">
