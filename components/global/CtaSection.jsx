@@ -1,10 +1,18 @@
-// components/CtaSection.js
+"use client";
+
 import { Heading, Text, Button } from "..";
+import { motion } from "framer-motion";
 
 export default function CtaSection() {
   return (
     <section className="py-[2rem] md:py-[5rem] px-4 text-center">
-      <div className="max-w-4xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto"
+      >
         <Heading level="h2" align="center" className="mb-[1.5rem]">
           Discover Our Delicious Sweets
         </Heading>
@@ -18,11 +26,12 @@ export default function CtaSection() {
           <Button variant="solid" color="green">
             Shop Now
           </Button>
+
           {/* <Button variant="outline" color="green">
             Learn More
           </Button> */}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
