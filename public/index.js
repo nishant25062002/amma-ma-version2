@@ -3,9 +3,11 @@ import GoogleLogo from "./assets/google-logo.jpg";
 import FullGoogleLogo from "./assets/google-logo.png";
 import FacebookLogo from "./assets/facebook-logo.jpg";
 import FullMetaLogo from "./assets/meta-logo-blue.webp";
+import Laddu0 from "./assets/laddu-0.jpg";
 import Laddu from "./assets/laddu-1.jpg";
 import Laddu2 from "./assets/gulab-jamun.jpg";
 import Laddu3 from "./assets/laddu-3.jpg";
+import Laddu4 from "./assets/laddu-4.jpg";
 import SectionImage from "./assets/section-image.jpg";
 import Logo from "./assets/logo.svg";
 import Tailwind_CSS_logo from "./assets/Tailwind_CSS_logo.png";
@@ -19,6 +21,7 @@ export {
   FullGoogleLogo,
   FacebookLogo,
   FullMetaLogo,
+  Laddu0,
   Laddu,
   Laddu2,
   Laddu3,
@@ -28,4 +31,5 @@ export {
   UserIcon,
   HeartIcon,
   ShieldIcon,
+  Laddu4,
 };

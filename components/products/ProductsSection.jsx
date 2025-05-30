@@ -1,6 +1,6 @@
 // components/ProductsSection.js
 
-import { Laddu, Laddu2, Laddu3 } from "@/public";
+import { Laddu, Laddu2, Laddu3, Laddu4 } from "@/public";
 import { Button, Heading, ProductCard, Text } from "..";
 
 const products = [
@@ -38,7 +38,7 @@ const products = [
   },
   {
     number: 4,
-    image: Laddu,
+    image: Laddu4,
     title: "Urad Dal Laddoo",
     subtitle: "Iron Booster",
     desc: "Ironrich, Strengthens bones, Fitness booster.",

@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export default function WhyUsSection() {
   return (
-    <section className=" py-[4rem] md:py-[7rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col gap-[3rem] md:gap-[5rem]">
+    <section className="py-[4rem] md:py-[7rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col gap-[3rem] md:gap-[5rem]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
         {/* Left Side */}
         <div>
           <Text weight="semibold" className="mb-[1rem] text-[#FFBF00]">
             Wholesome
           </Text>
-          <Heading level="h2" className="text-[#0C4539]">
+          <Heading level="h2">
             Indulge in Guilt-Free
             <br />
             Sweetness Today
@@ -21,8 +21,8 @@ export default function WhyUsSection() {
         </div>
 
         {/* Right Side */}
-        <div>
-          <Text size="regular">
+        <div className="pl-[3.75rem]">
+          <Text>
             Discover the joy of our sugar-free South Indian sweets, crafted with
             care using natural ingredients. Each bite is a celebration of
             health, packed with fibre and nutrition, ensuring you can indulge
@@ -36,9 +36,9 @@ export default function WhyUsSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3rem]">
         <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
-            <Image src={HeartIcon} width={30} height={30} />{" "}
+            <Image src={HeartIcon} alt={"Image"} width={30} height={30} />{" "}
           </div>
-          <Heading level="h4" className="text-[#0C4539] mb-2">
+          <Heading level="h4">
             Why Choose Our
             <br />
             Sugar-Free Sweets?
@@ -50,7 +50,7 @@ export default function WhyUsSection() {
 
         <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
-            <Image src={ShieldIcon} width={30} height={30} />
+            <Image src={ShieldIcon} alt={"Image"} width={30} height={30} />
           </div>
           <Heading level="h4" className="text-[#0C4539] mb-2">
             Packed with Nutrients
@@ -62,7 +62,7 @@ export default function WhyUsSection() {
 
         <div className="flex flex-col gap-[1rem] md:gap-[1.5rem]">
           <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem]">
-            <Image src={UserIcon} width={30} height={30} />
+            <Image src={UserIcon} alt={"Image"} width={30} height={30} />
           </div>
           <Heading level="h4" className="text-[#0C4539] mb-2">
             Crafted with Love and

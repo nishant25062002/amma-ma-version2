@@ -1,16 +1,15 @@
+import React from "react";
+import { Heading, Text } from "..";
 import Image from "next/image";
-import Heading from "../global/Heading";
-import Button from "../global/Button";
-import { HeroBackground } from "@/public";
-import { Text } from "..";
+import { Laddu0 } from "@/public";
 
-export default function HeroSection() {
+const VideoSection = () => {
   return (
-    <div className="relative w-full h-[calc(100vh-4.6rem)] flex items-center justify-center text-white text-center">
+    <div className="relative w-full h-[calc(80vh-4.6rem)] flex items-center justify-center text-white text-center">
       {/* Background Image */}
       <Image
-        src={HeroBackground}
-        alt="Background"
+        src={Laddu0}
+        alt="Background Video"
         layout="fill"
         objectFit="cover"
         quality={100}
@@ -29,19 +28,17 @@ export default function HeroSection() {
           color="text-white"
           className="md:w-[40rem] !font-[400] !text-white"
         >
-          Indulge in Guilt-Free South Indian Sweets
+          Lorem ipsum dolor adipisicing elit.
         </Heading>
 
         <Text className="!text-white mt-[1.5rem] md:w-[46rem]">
-          {`Discover the delightful taste of Amma-ma Foods’ sugar-free sweets,
-          crafted with the finest dates and dry fruits. Experience a wholesome
-          treat that nourishes your body without compromising on flavour.`}
+          {`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat ea sapiente fuga, voluptatem, quas beatae eaque atque molestias deleniti non ut sed praesentium ipsam voluptates aperiam repellendus repudiandae vel.`}
         </Text>
 
         <div className="flex gap-4 justify-center mt-[2rem]">
-          <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
+          {/* <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
             Order Now
-          </Button>
+          </Button> */}
           {/* <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
             {" "}
             Learn More
@@ -50,4 +47,6 @@ export default function HeroSection() {
       </div>
     </div>
   );
-}
+};
+
+export default VideoSection;

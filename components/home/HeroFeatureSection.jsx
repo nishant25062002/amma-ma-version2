@@ -23,7 +23,7 @@ export default function HeroFeatureSection({
           </Text>
 
           <Heading
-            level="h2"
+            level="h3"
             align="left"
             className="mb-[1.25rem] md:mb-[1.5rem]"
           >

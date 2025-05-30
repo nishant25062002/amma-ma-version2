@@ -14,6 +14,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <div className="h-[4.6rem]" />
+
       <Hero />
       {/*  This section is not present in present version*/}
       {/* <BrandGrid /> */}

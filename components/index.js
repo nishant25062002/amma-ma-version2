@@ -20,3 +20,12 @@ export { default as WhyUsSection } from "./home/WhyUsSection";
 // Products Components
 export { default as ProductCard } from "./products/ProductCard";
 export { default as ProductsSection } from "./products/ProductsSection";
+
+// Our-Story Components
+export { default as TimelineSection } from "./our-story/TimelineSection";
+export { default as VideoSection } from "./our-story/VideoSection";
+export { default as LegacySection } from "./our-story/LegacySection";
+export { default as MissionSection } from "./our-story/MissionSection";
+export { default as SplitFeatureSection } from "./our-story/SplitFeatureSection";
+export { default as StoryFeatureSection } from "./our-story/FeatureSection";
+export { default as CommunityAudienceSection } from "./our-story/CommunityAudienceSection";
