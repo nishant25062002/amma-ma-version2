@@ -29,3 +29,7 @@ export { default as MissionSection } from "./our-story/MissionSection";
 export { default as SplitFeatureSection } from "./our-story/SplitFeatureSection";
 export { default as StoryFeatureSection } from "./our-story/FeatureSection";
 export { default as CommunityAudienceSection } from "./our-story/CommunityAudienceSection";
+
+// Contact-Us Components
+export { default as ContactSection } from "./contact-us/ContactSection";
+export { default as ContactInfoSection } from "./contact-us/ContactInfoSection";

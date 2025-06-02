@@ -17,7 +17,7 @@ const logos = [
 
 export default function BrandGrid() {
   return (
-    <section className="w-full bg-white py-[2rem] md:py-[5rem]">
+    <section className="w-full bg-white py-[2rem]">
       <div className="flex flex-col items-center justify-center gap-[1.25rem] md:gap-[3rem] max-width-1200 px-[1.25rem] text-center">
         <Heading as="h6" level="h6" family="poppins" weight="semibold">
           Trusted by renowned brands and partners worldwide

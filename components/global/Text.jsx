@@ -21,7 +21,7 @@ const fontSizes = {
 // 👇 Map for font families
 const fontFamilies = {
   protest: "font-Libre", // Protest Riot
-  poppins: "font-inter", // Poppins
+  inter: "font-inter", // Inter
 };
 
 export default function Text({
