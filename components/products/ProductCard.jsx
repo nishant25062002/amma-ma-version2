@@ -1,5 +1,4 @@
 // components/ProductCard.js
-
 "use client";
 
 import Image from "next/image";
