@@ -6,6 +6,7 @@ import { Button, Heading, ProductCard, Text } from "..";
 const products = [
   {
     number: 0,
+    id: 0,
     image: Laddu,
     title: "Dry Fruit Laddoo",
     subtitle: "Brain Booster",
@@ -14,6 +15,7 @@ const products = [
   },
   {
     number: 1,
+    id: 1,
     image: Laddu2,
     title: "Flax Seed Laddoo",
     subtitle: "Omega Booster",
@@ -22,6 +24,7 @@ const products = [
   },
   {
     number: 2,
+    id: 2,
     image: Laddu3,
     title: "Black Sesame Laddoo",
     subtitle: "Hormone Balance Booster",
@@ -30,6 +33,7 @@ const products = [
   },
   {
     number: 3,
+    id: 3,
     image: Laddu,
     title: "White Sesame Laddoo",
     subtitle: "Glow Up Boost",
@@ -38,6 +42,7 @@ const products = [
   },
   {
     number: 4,
+    id: 4,
     image: Laddu4,
     title: "Urad Dal Laddoo",
     subtitle: "Iron Booster",
@@ -46,6 +51,7 @@ const products = [
   },
   {
     number: 5,
+    id: 5,
     image: Laddu2,
     title: "Raagi Laddoo",
     subtitle: "Millet Magic Booster",
@@ -54,6 +60,7 @@ const products = [
   },
   {
     number: 6,
+    id: 6,
     image: Laddu3,
     title: "Ravva Laddoo ",
     subtitle: "Energy Booster",
@@ -62,6 +69,7 @@ const products = [
   },
   {
     number: 7,
+    id: 7,
     image: Laddu,
     title: "Amma-Ma Power Pack",
     subtitle: "All-in-One Booster",

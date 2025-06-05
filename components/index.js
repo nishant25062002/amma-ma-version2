@@ -6,6 +6,7 @@ export { default as Button } from "./global/Button";
 export { default as CtaSection } from "./global/CtaSection";
 export { default as SubscribeSection } from "./global/SubscribeSection";
 export { default as Footer } from "./global/Footer";
+export { default as FaqSection } from "./global/FaqSection";
 
 // Home Components
 export { default as Hero } from "./home/Hero";
@@ -33,3 +34,10 @@ export { default as CommunityAudienceSection } from "./our-story/CommunityAudien
 // Contact-Us Components
 export { default as ContactSection } from "./contact-us/ContactSection";
 export { default as ContactInfoSection } from "./contact-us/ContactInfoSection";
+
+// Product Components
+export { default as PhotoGridWithModal } from "./product/PhotoGridWithModal";
+export { default as ProductDetail } from "./product/ProductDetail";
+
+// Payment Components
+export { default as CheckoutSection } from "./payment/CheckoutSection";
