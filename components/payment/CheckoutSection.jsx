@@ -49,7 +49,7 @@ const CheckoutSection = ({ amount }) => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: `${process.env.BASE_URL}/payment-success?amount=${amount}`,
+        return_url: `${window.location.origin}/payment-success?amount=${amount}`,
       },
     });
 

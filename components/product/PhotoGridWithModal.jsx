@@ -18,8 +18,8 @@ export default function PhotoGridWithModal() {
   };
 
   return (
-    <>
-      <section className="grid grid-cols-4 grid-rows-2 gap-2 relative max-w-7xl mx-auto p-4 rounded-xl overflow-hidden h-[40rem]">
+    <section className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-4 grid-rows-2 gap-2 relative rounded-xl overflow-hidden h-[35rem]">
         {photos.map((src, index) => {
           const isMain = index === 0;
           return (
@@ -50,7 +50,7 @@ export default function PhotoGridWithModal() {
             </div>
           );
         })}
-      </section>
+      </div>
 
       {/* Modal */}
       <AnimatePresence>
@@ -71,6 +71,6 @@ export default function PhotoGridWithModal() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </section>
   );
 }

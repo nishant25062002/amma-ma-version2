@@ -12,14 +12,14 @@ export default function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-[4rem] grid grid-cols-1 md:grid-cols-2 gap-[3rem]">
+    <section className="pb-[4rem] md:pb-[6rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row md:gap-[5rem] w-full">
       {/* Left */}
-      <div>
-        <Heading level="h2" className="mb-[1rem]">
+      <div className="flex flex-col w-full">
+        <Heading level="h3" className="mb-[2rem]">
           Date Delight
         </Heading>
 
-        <Text className="mb-[1.5rem]">
+        <Text className="mb-[1rem]">
           Our Date Delight is a nutritious alternative to traditional sweets,
           made with the finest dates and dry fruits. Indulge guilt-free in a
           treat that nourishes your body.
@@ -37,7 +37,7 @@ export default function ProductDetail() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-1 border-b-2 transition font-medium text-sm ${
+              className={`pb-1 border-b-2 transition ${
                 activeTab === tab
                   ? "border-black"
                   : "border-transparent text-gray-500"
@@ -59,27 +59,25 @@ export default function ProductDetail() {
       </div>
 
       {/* Right */}
-      <div className="flex flex-col gap-[1.5rem]">
-        <Heading level="h4">
-          <span className="text-2xl">£10</span>
+      <div className="flex flex-col gap-[1.5rem] md:min-w-[25rem] max-w-[25rem]">
+        <Heading level="h4" as="h4">
+          £10
         </Heading>
 
-        <div className="flex items-center text-sm">
+        <Text size="small" className="">
           <span className="text-black mr-2">⭐⭐⭐⭐</span>
-          <span className="text-gray-500">(4.5 stars) • 15 reviews</span>
-        </div>
+          (4.5 stars) • 15 reviews
+        </Text>
 
         <div>
-          <Text size="small" className="mb-1">
-            Size
-          </Text>
-          <div className="flex gap-2">
+          <Text className="mb-1">Size</Text>
+          <div className="flex gap-[1rem]">
             {sizes.map((size) => (
               <button
                 key={size}
                 disabled={size === "Custom"}
                 onClick={() => setSelectedSize(size)}
-                className={`border px-4 py-2 text-sm rounded ${
+                className={`border px-4 py-2 text-[1rem] leading-[150%] ${
                   selectedSize === size
                     ? "bg-black text-white"
                     : "bg-white text-black"
@@ -96,9 +94,7 @@ export default function ProductDetail() {
         </div>
 
         <div>
-          <Text size="small" className="mb-1">
-            Quantity
-          </Text>
+          <Text>Quantity</Text>
           <input
             type="number"
             min="1"
@@ -108,16 +104,17 @@ export default function ProductDetail() {
           />
         </div>
 
-        <Button variant="solid" className="w-full">
-          Add to cart
-        </Button>
-        <Button variant="outline" className="w-full">
-          Buy now
-        </Button>
-
-        <Text size="tiny" align="center" className="text-gray-500">
-          Free shipping over £50
-        </Text>
+        <div className="flex flex-col gap-[1rem]">
+          <Button variant="solid" className="w-full" secondary>
+            Add to cart
+          </Button>
+          <Button variant="outline" className="w-full" secondary>
+            Buy now
+          </Button>
+          <Text size="tiny" align="center" className="text-gray-500">
+            Free shipping over £50
+          </Text>
+        </div>
       </div>
     </section>
   );
