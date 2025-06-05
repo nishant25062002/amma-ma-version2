@@ -19,6 +19,7 @@ export default function ProductCard({
   const handleRedirect = () => {
     router.push(`/product/${id}`);
   };
+
   return (
     <div className="flex flex-col overflow-hidden cursor-pointer hover:text-[#F9C000] transition group gap-[1rem]">
       <div className="flex flex-col gap-[1rem]" onClick={handleRedirect}>

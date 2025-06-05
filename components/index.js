@@ -7,6 +7,7 @@ export { default as CtaSection } from "./global/CtaSection";
 export { default as SubscribeSection } from "./global/SubscribeSection";
 export { default as Footer } from "./global/Footer";
 export { default as FaqSection } from "./global/FaqSection";
+export { default as Faq } from "./global/Faq";
 
 // Home Components
 export { default as Hero } from "./home/Hero";

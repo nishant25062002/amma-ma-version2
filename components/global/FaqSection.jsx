@@ -1,9 +1,5 @@
 // components/FaqSection.jsx
-"use client";
-
-import { useState } from "react";
-import { Heading, Text } from "@/components";
-import { IoClose } from "react-icons/io5";
+import { Faq, Heading, Text } from "@/components";
 
 const faqData = [
   {
@@ -21,45 +17,32 @@ const faqData = [
     answer:
       "Our sweets are made with natural ingredients, but they may contain nuts and dried fruits. Always check the ingredient list for specific allergen information. If you have allergies, please consult with us before consumption.",
   },
+  {
+    question: "Can I gift these?",
+    answer:
+      "Absolutely! Our sugar-free sweets make perfect gifts for any occasion. You can choose from a variety of flavours and packaging options to suit your gifting needs.",
+  },
+  {
+    question: "Are there allergens present?",
+    answer:
+      "We're here to help! If you have any further questions, please reach out to our customer service team. Your satisfaction is our priority.",
+  },
 ];
 
 export default function FaqSection() {
-  const [openIndexes, setOpenIndexes] = useState(faqData.map((_, i) => i));
-
-  const toggleIndex = (index) => {
-    setOpenIndexes((prev) => prev.filter((i) => i !== index));
-  };
-
   return (
-    <section className="max-w-4xl mx-auto px-4 py-[5rem]">
-      <Heading level="h2" align="center" className="mb-[1rem]">
+    <section className="max-w-4xl mx-auto px-4 py-[5rem] flex flex-col items-center">
+      <Heading level="h2" align="center" className="mb-[1.5rem]">
         FAQs
       </Heading>
-      <Text align="center" className="mb-[3rem]">
+      <Text size="medium" align="center" className="mb-[3rem] md:mb-[5rem]">
         Find answers to your questions about our sugar-free sweets and how to
         enjoy them.
       </Text>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-[1rem] max-w-[50rem]">
         {faqData.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-black rounded-xl p-5 relative"
-          >
-            <button
-              onClick={() => toggleIndex(index)}
-              className="absolute top-4 right-4 text-xl"
-            >
-              <IoClose />
-            </button>
-
-            <p className="font-semibold mb-2 text-[1rem]">{faq.question}</p>
-            {openIndexes.includes(index) && (
-              <p className="text-sm text-gray-700 leading-relaxed">
-                {faq.answer}
-              </p>
-            )}
-          </div>
+          <Faq key={index} faq={faq} index={index} />
         ))}
       </div>
     </section>
