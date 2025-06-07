@@ -41,9 +41,11 @@ export default function HeroFeatureSection({
             {heading}
           </Heading>
 
-          <Text size="medium" className="mb-[1.5rem] md:mb-[2.5rem]">
-            {desc}
-          </Text>
+          <Text
+            size="medium"
+            className="mb-[1.5rem] md:mb-[2.5rem]"
+            dangerouslySetInnerHTML={{ __html: desc }}
+          />
 
           <div className="flex justify-start">
             <Button variant="outline" className="!border-black !text-black">

@@ -31,6 +31,7 @@ export default function Text({
   align = "left", // 'left' | 'center' | 'right'
   className = "text-[#000700]", // Extra classes
   children,
+  ...rest
 }) {
   const sizeClass = fontSizes[size] || fontSizes.regular;
   const weightClass = `font-${weight}`;
@@ -41,5 +42,9 @@ export default function Text({
     .filter(Boolean)
     .join(" ");
 
-  return <p className={classes}>{children}</p>;
+  return (
+    <p className={classes} {...rest}>
+      {children}
+    </p>
+  );
 }

@@ -1,4 +1,5 @@
 import { Ghee, Jaggery, Laddu, Laddu0, Laddu2 } from "@/public";
+import { TiTick } from "react-icons/ti";
 
 export const navData = [
   {
@@ -103,15 +104,17 @@ export const HeroFeatureData = [
     title: "Ancient",
     heading: "Pure Ghee (Indian Clarified Butter)",
     desc: `At Amma-ma Foods, We don’t just make sweets — we use ancient, natural ingredients that truly nourish your body.
-
+<br/>
 Ghee is a type of clarified butter, traditionally made in India by slowly simmering butter until the water evaporates and milk solids are removed.
+<br/>
+<br/>
 
--Rich in healthy fats (especially butyrate, great for digestion)
-- Naturally lactose-free
-- High smoke point — safe for cooking and baking
-- Contains vitamins A, D, E, and K
-- Known in Ayurveda for boosting immunity and brain function
-
+<span class="font-bold text-[#0C4539] pr-2">✔</span> Rich in healthy fats (especially butyrate, great for digestion)<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span>  Naturally lactose-free<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span>  High smoke point — safe for cooking and baking<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span>  Contains vitamins A, D, E, and K<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span>  Known in Ayurveda for boosting immunity and brain function<br/>
+<br/>
 Amma-Ma uses pure cow’s ghee, just like it’s been made in Indian kitchens for centuries — with patience and care. We use ghee instead of oils or butter because it’s natural, wholesome, and has been trusted by generations for strength and vitality.`,
     imageSrc: Ghee,
     imageAlt: "Ghee",
@@ -122,11 +125,13 @@ Amma-Ma uses pure cow’s ghee, just like it’s been made in Indian kitchens fo
     desc: `At Amma-ma Foods, We don’t just make sweets — we use ancient, natural ingredients that truly nourish your body.
 
 Jaggery is a traditional, unrefined sweetener made by boiling sugarcane juice until it solidifies — no chemicals, no processing.
-
-- 100% natural and chemical-free
-- Retains iron, magnesium, potassium, and antioxidants
-- Helps cleanse the liver and boost energy
-- Has a rich, caramel-like taste with deep warmth
+<br/>
+<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span> 100% natural and chemical-free<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span> Retains iron, magnesium, potassium, and antioxidants<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span> Helps cleanse the liver and boost energy<br/>
+<span class="font-bold text-[#0C4539] pr-2">✔</span> Has a rich, caramel-like taste with deep warmth<br/>
+<br/>
 
 We source pure Indian jaggery, just like what’s used in village homes — golden, earthy, and naturally sweet.Unlike white sugar, jaggery supports your health and adds real depth of flavour — making Amma-Ma laddoos sweet and smart.`,
     imageSrc: Jaggery,
