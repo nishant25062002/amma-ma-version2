@@ -64,7 +64,10 @@ export default function TestimonialSection() {
   const goToSlide = (i) => instanceRef.current?.moveToIdx(i);
 
   return (
-    <section className="py-[4rem] md:py-[7rem] px-4 md:px-8 relative">
+    <section
+      className="py-[4rem] md:py-[7rem] px-4 md:px-8 relative"
+      id="reviews"
+    >
       <div className="max-w-4xl mx-auto text-center mb-12">
         <Heading level="h2" align="center" className="mb-4">
           Customers Love Our Recipes

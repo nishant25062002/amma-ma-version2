@@ -163,7 +163,7 @@ export const footerLinks = [
   {
     title: "Stay Updated",
     items: [
-      { label: "Join Us", path: "/join" },
+      { label: "Join Us", path: "/#join-us" },
       // { label: "Subscribe Now", path: "/subscribe" },
       { label: "Latest News", path: "/coming-soon" },
       { label: "Special Offers", path: "/coming-soon" },
