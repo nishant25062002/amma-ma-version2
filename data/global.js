@@ -142,20 +142,60 @@ We source pure Indian jaggery, just like what’s used in village homes — gold
 export const footerLinks = [
   {
     title: "Quick Links",
-    items: ["Our Story", "Shop Now", "FAQs", "Contact Us", "Customer Reviews"],
+    items: [
+      { label: "Our Story", path: "/our-story" },
+      { label: "Shop Now", path: "/products" },
+      { label: "FAQs", path: "/#faqs" },
+      { label: "Contact Us", path: "/contact-us" },
+      { label: "Customer Reviews", path: "/#reviews" },
+    ],
   },
   {
     title: "Connect With Us",
-    items: ["Instagram", "Facebook", "Twitter", "LinkedIn", "Newsletter"],
+    items: [
+      { label: "Instagram", path: "https://instagram.com" },
+      { label: "Facebook", path: "https://facebook.com" },
+      { label: "Twitter", path: "https://twitter.com" },
+      { label: "LinkedIn", path: "https://linkedin.com" },
+      // { label: "Newsletter", path: "/newsletter" },
+    ],
   },
   {
     title: "Stay Updated",
     items: [
-      "Join Us",
-      "Subscribe Now",
-      "Latest News",
-      "Special Offers",
-      "Gift Ideas",
+      { label: "Join Us", path: "/join" },
+      // { label: "Subscribe Now", path: "/subscribe" },
+      { label: "Latest News", path: "/coming-soon" },
+      { label: "Special Offers", path: "/coming-soon" },
+      { label: "Gift Ideas", path: "/coming-soon" },
     ],
+  },
+];
+
+export const faqData = [
+  {
+    question: "What is the shelf life?",
+    answer:
+      "Our sugar-free sweets have a shelf life of approximately three months when stored correctly. Keep them in a cool, dry place away from direct sunlight. For the best taste, consume them within the first month.",
+  },
+  {
+    question: "How should I store?",
+    answer:
+      "Store our sweets in an airtight container to maintain freshness. A cool, dry environment is ideal for preserving their texture and flavour. Avoid refrigeration, as it may alter the consistency.",
+  },
+  {
+    question: "Are there allergens present?",
+    answer:
+      "Our sweets are made with natural ingredients, but they may contain nuts and dried fruits. Always check the ingredient list for specific allergen information. If you have allergies, please consult with us before consumption.",
+  },
+  {
+    question: "Can I gift these?",
+    answer:
+      "Absolutely! Our sugar-free sweets make perfect gifts for any occasion. You can choose from a variety of flavours and packaging options to suit your gifting needs.",
+  },
+  {
+    question: "Are there allergens present?",
+    answer:
+      "We're here to help! If you have any further questions, please reach out to our customer service team. Your satisfaction is our priority.",
   },
 ];

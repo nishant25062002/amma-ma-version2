@@ -1,3 +1,4 @@
+"use client";
 // components/Footer.jsx
 
 import {
@@ -11,8 +12,14 @@ import { Button, Text } from "..";
 import Image from "next/image";
 import { Logo } from "@/public";
 import { footerLinks } from "@/data/global";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const handleRedirect = (path) => {
+    router.push(path);
+  };
   return (
     <footer className="bg-[#0C4539] border-t border-[#FDFDFD] pt-12">
       <div className="max-width-1300 flex flex-col px-[1.25rem] md:px-0 md:flex-row gap-[2.5rem] !mb-[6.5rem]">
@@ -29,8 +36,12 @@ export default function Footer() {
             </Text>
             <ul className="space-y-[1rem] text-[0.875rem] text-[#FDFDFD] font-inter">
               {section.items.map((item, i) => (
-                <li key={i} className="cursor-pointer hover:underline">
-                  {item}
+                <li
+                  key={i}
+                  className="cursor-pointer hover:underline"
+                  onClick={() => handleRedirect(item.path)}
+                >
+                  {item.label}
                 </li>
               ))}
             </ul>

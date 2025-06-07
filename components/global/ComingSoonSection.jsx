@@ -4,7 +4,7 @@
 "use client";
 
 import React from "react";
-import { Heading, Text } from "..";
+import { Text } from "..";
 import Image from "next/image";
 import { ComingSoon } from "@/public";
 
