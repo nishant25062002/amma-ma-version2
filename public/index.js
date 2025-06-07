@@ -16,6 +16,7 @@ import ShieldIcon from "./assets/ShieldIcon.svg";
 import HeartIcon from "./assets/HeartIcon.svg";
 import Jaggery from "./assets/jaggery.jpg";
 import Ghee from "./assets/ghee.jpg";
+import ComingSoon from "./assets/coming-soon.jpg";
 
 export {
   HeroBackground,
@@ -36,4 +37,5 @@ export {
   Laddu4,
   Jaggery,
   Ghee,
+  ComingSoon,
 };

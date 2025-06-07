@@ -21,15 +21,8 @@ export default function ProductCard({
   const cartItems = useSelector((state) => state.cart.items);
   const [isPresentInCart, setIsPresentInCart] = useState(false);
 
-  useEffect(() => {
-    console.log("runs");
-    setIsPresentInCart(cartItems.findIndex((item) => item.id === id) !== -1);
-  }, [cartItems]);
-
   const handleAddToCart = () => {
-    console.log("ging", isPresentInCart);
     if (isPresentInCart) {
-      console.log("runging", isPresentInCart, cartItems);
       dispatch(removeFromCart(id));
     } else {
       dispatch(
@@ -48,6 +41,10 @@ export default function ProductCard({
   const handleRedirect = () => {
     router.push(`/products/${id}`);
   };
+
+  useEffect(() => {
+    setIsPresentInCart(cartItems.findIndex((item) => item.id === id) !== -1);
+  }, [cartItems]);
 
   return (
     <div className="flex flex-col overflow-hidden cursor-pointer hover:text-[#F9C000] transition group gap-[1rem]">

@@ -1,7 +1,9 @@
 // components/ProductsSection.js
+"use client";
 
 import { Laddu, Laddu2, Laddu3, Laddu4 } from "@/public";
 import { Button, Heading, ProductCard, Text } from "..";
+import { useRouter } from "next/navigation";
 
 const products = [
   {
@@ -79,6 +81,12 @@ const products = [
 ];
 
 export default function ProductsSection() {
+  const router = useRouter();
+
+  const redirectToProducts = () => {
+    router.push("/products");
+  };
+
   return (
     <section className="py-[4rem] md:py-[7rem] px-4 md:px-8 bg-[#0C4539]">
       <div className="max-w-7xl mx-auto">
@@ -99,7 +107,11 @@ export default function ProductsSection() {
               Explore our range of delicious sugar-free sweets.
             </Text>
           </div>
-          <Button variant="outline" className="hidden md:block">
+          <Button
+            variant="outline"
+            className="hidden md:block"
+            onClick={redirectToProducts}
+          >
             View all
           </Button>
         </div>

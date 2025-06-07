@@ -9,7 +9,6 @@ import Image from "next/image";
 import { Logo } from "@/public";
 import { HiShoppingCart } from "react-icons/hi";
 import { useSelector } from "react-redux";
-import { Text } from "..";
 
 const AnimatedMenuIcon = ({ isOpen = false, setIsOpen }) => {
   return (
