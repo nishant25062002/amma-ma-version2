@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button, Heading, Text } from "..";
-import { SectionImage } from "@/public";
 import { motion } from "framer-motion";
 
 export default function HeroFeatureSection({
@@ -12,6 +11,8 @@ export default function HeroFeatureSection({
   heading,
   desc,
   reverse = false,
+  imageSrc,
+  imageAlt,
 }) {
   return (
     <section className={`flex flex-col py-[3rem] md:py-[5rem] ${mainClass}`}>
@@ -57,14 +58,9 @@ export default function HeroFeatureSection({
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: true }}
-          className="relative rounded-[1rem] bg-neutral-200 w-full h-[20rem] md:h-[28rem] flex items-center justify-center overflow-hidden"
+          className="relative rounded-[1rem] bg-neutral-200 w-full min-w-[30rem] h-[20rem] md:h-[28rem] flex items-center justify-center overflow-hidden"
         >
-          <Image
-            src={SectionImage}
-            alt="Handcrafted sweets"
-            fill
-            className="object-cover"
-          />
+          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
         </motion.div>
       </div>
     </section>

@@ -42,3 +42,7 @@ export { default as ProductDetail } from "./product/ProductDetail";
 
 // Payment Components
 export { default as CheckoutSection } from "./payment/CheckoutSection";
+export { default as PaymentSection } from "./payment/PaymentSection";
+
+// Cart Components
+export { default as CartSection } from "./cart/CartSection";

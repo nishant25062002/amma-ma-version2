@@ -4,6 +4,9 @@
 import Image from "next/image";
 import { Button, Heading, Text } from "..";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
+import { useEffect, useState } from "react";
 
 export default function ProductCard({
   id,
@@ -14,9 +17,36 @@ export default function ProductCard({
   desc,
 }) {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+  const [isPresentInCart, setIsPresentInCart] = useState(false);
+
+  useEffect(() => {
+    console.log("runs");
+    setIsPresentInCart(cartItems.findIndex((item) => item.id === id) !== -1);
+  }, [cartItems]);
+
+  const handleAddToCart = () => {
+    console.log("ging", isPresentInCart);
+    if (isPresentInCart) {
+      console.log("runging", isPresentInCart, cartItems);
+      dispatch(removeFromCart(id));
+    } else {
+      dispatch(
+        addToCart({
+          id,
+          image,
+          title,
+          subtitle,
+          price,
+          desc,
+        })
+      );
+    }
+  };
 
   const handleRedirect = () => {
-    router.push(`/product/${id}`);
+    router.push(`/products/${id}`);
   };
 
   return (
@@ -68,8 +98,11 @@ export default function ProductCard({
           </Text>
         </div>
       </div>
-      <Button variant="outline" className="">
-        Add to cart
+      <Button
+        variant={isPresentInCart ? "solid" : "outline"}
+        onClick={handleAddToCart}
+      >
+        {isPresentInCart ? "Remove to Cart" : "Add to Cart"}
       </Button>
     </div>
   );

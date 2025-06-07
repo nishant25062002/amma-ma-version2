@@ -14,6 +14,8 @@ import Tailwind_CSS_logo from "./assets/Tailwind_CSS_logo.png";
 import UserIcon from "./assets/UserIcon.svg";
 import ShieldIcon from "./assets/ShieldIcon.svg";
 import HeartIcon from "./assets/HeartIcon.svg";
+import Jaggery from "./assets/jaggery.jpg";
+import Ghee from "./assets/ghee.jpg";
 
 export {
   HeroBackground,
@@ -32,4 +34,6 @@ export {
   HeartIcon,
   ShieldIcon,
   Laddu4,
+  Jaggery,
+  Ghee,
 };

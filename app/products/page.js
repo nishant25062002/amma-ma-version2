@@ -12,15 +12,12 @@ export default function ProductsPage() {
     <>
       <Navbar />
       <div className="h-[4.6rem]" />
-      {/* <Hero /> */}
-      {/*  This section is not present in present version*/}
-      {/* <BrandGrid /> */}
-
-      {/* ProductsSection */}
-      <ProductsSection />
 
       {/*  This section is new in present version*/}
       <WhyUsSection />
+
+      {/* ProductsSection */}
+      <ProductsSection />
 
       {/* TestimonialSection */}
       <TestimonialSection />

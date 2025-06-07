@@ -1,3 +1,4 @@
+import ReduxProvider from "@/providers/ReduxProvider";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 
@@ -9,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }

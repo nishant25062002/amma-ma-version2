@@ -7,6 +7,7 @@ import {
   PaymentElement,
 } from "@stripe/react-stripe-js";
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
+import { Button } from "..";
 
 const CheckoutSection = ({ amount }) => {
   const stripe = useStripe();
@@ -42,8 +43,6 @@ const CheckoutSection = ({ amount }) => {
       setLoading(false);
       return;
     }
-
-    console.log("Using clientSecret:", clientSecret);
 
     const { error } = await stripe.confirmPayment({
       elements,
@@ -81,17 +80,18 @@ const CheckoutSection = ({ amount }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-2 rounded-md">
+    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-md">
       {clientSecret && <PaymentElement />}
 
       {errorMessage && <div>{errorMessage}</div>}
 
-      <button
+      <Button
         disabled={!stripe || loading}
-        className="text-white w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
+        className="text-white w-full mt-4 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
+        secondary
       >
-        {!loading ? `Pay $${amount}` : "Processing..."}
-      </button>
+        {!loading ? `Pay £${amount}` : `Processing...`}
+      </Button>
     </form>
   );
 };

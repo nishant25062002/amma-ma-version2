@@ -54,7 +54,7 @@ export default function HeroSection() {
           viewport={{ once: true }}
           className="flex gap-4 justify-center mt-[2rem]"
         >
-          <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
+          <Button className="!bg-white hover:!text-[#F9C000] !text-black font-semibold !hover:bg-gray-100 transition">
             Order Now
           </Button>
 

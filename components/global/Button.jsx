@@ -7,15 +7,9 @@ const Button = ({
   children = "Shop",
   className = "",
   variant = "solid", // 'solid' | 'outline'
-  href = "/contact-us",
+  onClick = () => {},
   secondary = false,
 }) => {
-  const router = useRouter();
-
-  const handleRedirect = () => {
-    router.push(href);
-  };
-
   // Tailwind styles based on variant
   const baseStyles =
     "font-inter font-[500] px-6 py-2 h-[40px] text-sm min-w-[5.2rem] rounded-[0.75rem] transition flex items-center justify-center cursor-pointer";
@@ -30,7 +24,7 @@ const Button = ({
   return (
     <button
       className={`${baseStyles} ${variants[variant]} ${className}`}
-      onClick={handleRedirect}
+      onClick={onClick}
     >
       {children}
     </button>
