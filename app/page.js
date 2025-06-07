@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Hero,
   Navbar,
@@ -15,13 +16,14 @@ import { scrollToId } from "@/lib/scrollToId";
 import { useEffect } from "react";
 
 export default function Home() {
-  const pathname = window.location.pathname; // e.g. "/services/web-design"
-  const segments = pathname.split("/").filter(Boolean); // removes empty strings
-  const id = segments[segments.length - 1]; // "web-design"
-
   useEffect(() => {
-    scrollToId(id);
-  }, [id]);
+    if (typeof window !== "undefined") {
+      const pathname = window.location.pathname;
+      const segments = pathname.split("/").filter(Boolean);
+      const id = segments[segments.length - 1];
+      scrollToId(id);
+    }
+  }, []);
 
   return (
     <>
@@ -37,8 +39,8 @@ export default function Home() {
 
       {/* ProductsSection */}
       <ProductsSection />
-      {/* TestimonialSection */}
 
+      {/* TestimonialSection */}
       <TestimonialSection />
 
       {/* HeroFeature */}
