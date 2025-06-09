@@ -8,7 +8,7 @@ const Faq = ({ faq, index }) => {
   return (
     <div className="border border-black rounded-xl p-[1.3rem_1.5rem] w-full">
       <div
-        className="flex items-center justify-between mb-[1rem] cursor-pointer"
+        className="flex items-center justify-between cursor-pointer"
         onClick={() => setShow(!show)}
       >
         <p className="font-semibold text-[1rem]">{faq.question}</p>
@@ -20,7 +20,9 @@ const Faq = ({ faq, index }) => {
       </div>
 
       {show && (
-        <p className="text-sm text-gray-700 leading-relaxed">{faq.answer}</p>
+        <p className="text-sm text-gray-700 leading-relaxed mt-[1rem]">
+          {faq.answer}
+        </p>
       )}
     </div>
   );
