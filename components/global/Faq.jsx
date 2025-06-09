@@ -6,7 +6,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 const Faq = ({ faq, index }) => {
   const [show, setShow] = useState(false || index == 0);
   return (
-    <div className="border border-black rounded-xl p-[1.3rem_1.5rem]">
+    <div className="border border-black rounded-xl p-[1.3rem_1.5rem] w-full">
       <div
         className="flex items-center justify-between mb-[1rem] cursor-pointer"
         onClick={() => setShow(!show)}

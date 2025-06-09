@@ -5,7 +5,7 @@ import { faqData } from "@/data/global";
 export default function FaqSection() {
   return (
     <section
-      className="max-w-4xl w-full mx-auto py-[4rem] md:py-[7rem] px-4 md:px-8 flex flex-col items-center"
+      className="max-w-4xl w-full mx-auto py-[4rem] md:py-[5rem] px-4 md:px-8 flex flex-col items-center"
       id="faqs"
     >
       <Heading level="h2" align="center" className="mb-[1.5rem]">
@@ -16,7 +16,7 @@ export default function FaqSection() {
         enjoy them.
       </Text>
 
-      <div className="flex flex-col gap-[1rem] max-w-[50rem]">
+      <div className="flex flex-col gap-[1rem] max-w-[50rem] w-full">
         {faqData.map((faq, index) => (
           <Faq key={index} faq={faq} index={index} />
         ))}
