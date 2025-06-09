@@ -11,9 +11,7 @@ import { Fragment } from "react";
 const ReuseDialog = ({
   isOpen,
   children = null,
-  handleclose = () => {
-    console.log("no close");
-  },
+  handleclose = () => {},
   className = "",
   header = false,
 }) => {

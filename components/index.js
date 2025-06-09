@@ -12,7 +12,7 @@ export { default as ComingSoonSection } from "./global/ComingSoonSection";
 export { default as Alert } from "./global/popup/Alert";
 
 // Home Components
-export { default as Hero } from "./home/Hero";
+export { default as Hero } from "./home/HeroSection";
 export { default as BrandGrid } from "./home/BrandGrid";
 export { default as FeatureSection } from "./home/FeatureSection";
 export { default as HeroFeatureSection } from "./home/HeroFeatureSection";

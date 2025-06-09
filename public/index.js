@@ -17,6 +17,9 @@ import HeartIcon from "./assets/HeartIcon.svg";
 import Jaggery from "./assets/jaggery.jpg";
 import Ghee from "./assets/ghee.jpg";
 import ComingSoon from "./assets/coming-soon.jpg";
+import LadduBowl from "./assets/laddu-in-bowl.jpg";
+import AmmaMa from "./assets/amma-ma.jpg";
+import LadduInBowl from "./assets/laddu-in-bowl-white.png";
 
 export {
   HeroBackground,
@@ -38,4 +41,7 @@ export {
   Jaggery,
   Ghee,
   ComingSoon,
+  LadduBowl,
+  AmmaMa,
+  LadduInBowl,
 };
