@@ -1,5 +1,4 @@
-import { Ghee, Jaggery, Laddu, Laddu0, Laddu2 } from "@/public";
-import { TiTick } from "react-icons/ti";
+import { Ghee, Jaggery, Laddu, Laddu0, Laddu2, Laddu3, Laddu4 } from "@/public";
 
 export const navData = [
   {
@@ -17,6 +16,89 @@ export const navData = [
   {
     tab: "Contact Us",
     path: "/contact-us",
+  },
+];
+
+export const productsData = [
+  {
+    number: 0,
+    id: "0",
+    image: Laddu,
+    title: "Dry Fruit Laddoo",
+    subtitle: "Brain Booster",
+    desc: "Improves memory, Good for kids, Fitness energy snack.",
+    price: 10,
+    photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
+  },
+  {
+    number: 1,
+    id: "1",
+    image: Laddu2,
+    title: "Flax Seed Laddoo",
+    subtitle: "Omega Booster",
+    desc: "Supports heart health, Womens hormone balance, Rich in Omega3.",
+    price: 12,
+    photos: [Laddu2, Laddu2, Laddu2, Laddu2, Laddu2],
+  },
+  {
+    number: 2,
+    id: "2",
+    image: Laddu3,
+    title: "Black Sesame Laddoo",
+    subtitle: "Hormone Balance Booster",
+    desc: "Hormone health, Improves hair & skin, Strengthens bones.",
+    price: 15,
+    photos: [Laddu3, Laddu3, Laddu3, Laddu3, Laddu3],
+  },
+  {
+    number: 3,
+    id: "3",
+    image: Laddu,
+    title: "White Sesame Laddoo",
+    subtitle: "Glow Up Boost",
+    desc: "Enhances skin glow, Boosts calcium, Supports hair growth.",
+    price: 14,
+    photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
+  },
+  {
+    number: 4,
+    id: "4",
+    image: Laddu4,
+    title: "Urad Dal Laddoo",
+    subtitle: "Iron Booster",
+    desc: "Ironrich, Strengthens bones, Fitness booster.",
+    price: 10,
+    photos: [Laddu4, Laddu4, Laddu4, Laddu4, Laddu4],
+  },
+  {
+    number: 5,
+    id: "5",
+    image: Laddu2,
+    title: "Raagi Laddoo",
+    subtitle: "Millet Magic Booster",
+    desc: "Rich in calcium, Good for bones, Aids digestion",
+    price: 12,
+    photos: [Laddu2, Laddu2, Laddu2, Laddu2, Laddu2],
+  },
+  {
+    number: 6,
+    id: "6",
+    image: Laddu3,
+    title: "Ravva Laddoo ",
+    subtitle: "Energy Booster",
+    desc: "Quick energy, Good for kids & adults, Light on digestion.",
+    price: 15,
+    photos: [Laddu3, Laddu3, Laddu3, Laddu3, Laddu3],
+  },
+  {
+    number: 7,
+    id: "7",
+    image: Laddu,
+    title: "Amma-Ma Power Pack",
+    subtitle: "All-in-One Booster",
+    desc: "Boosts immunity, Supports brain & heart health, Nourishes overall wellbeing, Family health pack.",
+    price: 14,
+    photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
   },
 ];
 

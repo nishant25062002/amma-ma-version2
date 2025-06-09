@@ -33,6 +33,7 @@ export default function ProductCard({
           subtitle,
           price,
           desc,
+          weight: 500,
         })
       );
     }

@@ -1,22 +1,68 @@
 // components/ProductDetailSection.jsx
 "use client";
 
-import { useState } from "react";
-import { Heading, Text, Button } from "@/components";
+import { useEffect, useState } from "react";
+import { Heading, Text, Button, Alert } from "@/components";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
+import { useRouter } from "next/navigation";
 
-const sizes = ["500g", "1000g", "Custom"];
+const sizes = [
+  { label: "500g", value: 500 },
+  { label: "1000g", value: 1000 },
+];
 
-export default function ProductDetail() {
-  const [activeTab, setActiveTab] = useState("Details");
-  const [selectedSize, setSelectedSize] = useState("500g");
+export default function ProductDetail({ productDetails }) {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
+  const [activeTab, setActiveTab] = useState("Details");
+  const [selectedWeight, setSelectedWeight] = useState(500);
+  const [openPopUp, setPopUp] = useState(false);
+
+  const cartItems = useSelector((state) => state.cart.items);
+  const [isPresentInCart, setIsPresentInCart] = useState(false);
+
+  const handleAddToCart = () => {
+    const id = productDetails?.id;
+    if (selectedWeight < 100) {
+      return setPopUp(true);
+    }
+    if (isPresentInCart) {
+      dispatch(removeFromCart(id));
+    } else {
+      dispatch(
+        addToCart({
+          ...productDetails,
+          weight: selectedWeight,
+        })
+      );
+    }
+  };
+
+  const handleRedirect = () => {
+    router.push(`/cart`);
+  };
+
+  useEffect(() => {
+    setIsPresentInCart(
+      cartItems.findIndex((item) => item.id === productDetails?.id) !== -1
+    );
+  }, [cartItems]);
 
   return (
     <section className="pb-[4rem] md:pb-[6rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row md:gap-[5rem] w-full">
       {/* Left */}
+      <Alert
+        heading={`🧪 Minimum Quantity Required`}
+        message="Weight should be at least 100 grams to proceed with your order. Please increase the quantity."
+        isOpen={openPopUp}
+        handleclose={() => setPopUp(false)}
+      />
+
       <div className="flex flex-col w-full">
         <Heading level="h3" className="mb-[2rem]">
-          Date Delight
+          {productDetails?.title}
         </Heading>
 
         <Text className="mb-[1rem]">
@@ -40,7 +86,7 @@ export default function ProductDetail() {
               className={`pb-1 border-b-2 transition ${
                 activeTab === tab
                   ? "border-black"
-                  : "border-transparent text-gray-500"
+                  : "border-transparent text-gray-500 cursor-pointer"
               }`}
             >
               {tab}
@@ -61,7 +107,7 @@ export default function ProductDetail() {
       {/* Right */}
       <div className="flex flex-col gap-[1.5rem] md:min-w-[25rem] max-w-[25rem]">
         <Heading level="h4" as="h4">
-          £10
+          £{productDetails?.price}
         </Heading>
 
         <Text size="small" className="">
@@ -69,46 +115,61 @@ export default function ProductDetail() {
           (4.5 stars) • 15 reviews
         </Text>
 
-        <div>
+        <div className="space-y-[1rem]">
           <Text className="mb-1">Size</Text>
           <div className="flex gap-[1rem]">
             {sizes.map((size) => (
               <button
-                key={size}
-                disabled={size === "Custom"}
-                onClick={() => setSelectedSize(size)}
-                className={`border px-4 py-2 text-[1rem] leading-[150%] ${
-                  selectedSize === size
+                key={size.label}
+                onClick={() => setSelectedWeight(size.value)}
+                className={`border-2 border-[#010303] px-4 py-2 text-[1rem] leading-[150%] w-[6rem] cursor-pointer ${
+                  selectedWeight === size.value
                     ? "bg-black text-white"
                     : "bg-white text-black"
-                } ${
-                  size === "Custom"
-                    ? "cursor-not-allowed opacity-60"
-                    : "hover:bg-gray-100"
                 }`}
               >
-                {size}
+                {size.label}
               </button>
             ))}
+          </div>
+          <div className="flex items-center gap-1">
+            <input
+              type="number"
+              min={100}
+              placeholder="Custom"
+              className={`border-2 border-[#bbbbbb] px-4 py-2 text-[1rem] leading-[150%] w-[10rem] placeholder-[#bbbbbb]`}
+              onClick={(e) => setSelectedWeight(e.target.value)}
+            />
+            (in grams)
           </div>
         </div>
 
         <div>
-          <Text>Quantity</Text>
+          <Text className="mb-1">Quantity</Text>
           <input
             type="number"
             min="1"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
-            className="w-16 text-center border border-black rounded px-2 py-1"
+            className="w-16 text-center border-2 border-[#010303] rounded px-2 py-1"
           />
         </div>
 
         <div className="flex flex-col gap-[1rem]">
-          <Button variant="solid" className="w-full" secondary>
-            Add to cart
+          <Button
+            variant="solid"
+            className="w-full"
+            secondary
+            onClick={handleAddToCart}
+          >
+            {isPresentInCart ? "Remove to Cart" : "Add to Cart"}
           </Button>
-          <Button variant="outline" className="w-full" secondary>
+          <Button
+            variant="outline"
+            className="w-full"
+            secondary
+            onClick={handleRedirect}
+          >
             Buy now
           </Button>
           <Text size="tiny" align="center" className="text-gray-500">

@@ -114,12 +114,6 @@ const CartSection = () => {
                   >
                     Remove
                   </Button>
-                  {/* <button
-                    onClick={() => dispatch(removeFromCart(item.id))}
-                    className="text-xs text-red-500 mt-2 hover:underline"
-                  >
-                    Remove
-                  </button> */}
                 </div>
               </div>
             ))}

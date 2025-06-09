@@ -4,13 +4,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Laddu } from "@/public";
 
-const photos = [Laddu, Laddu, Laddu, Laddu, Laddu];
-
-export default function PhotoGridWithModal() {
+export default function PhotoGridWithModal({ productDetails }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activePhoto, setActivePhoto] = useState(0);
+  const [activePhoto, setActivePhoto] = useState(null);
 
   const openModal = (img) => {
     setActivePhoto(img);
@@ -20,7 +17,7 @@ export default function PhotoGridWithModal() {
   return (
     <section className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto">
       <div className="grid grid-cols-4 grid-rows-2 gap-2 relative rounded-xl overflow-hidden h-[35rem]">
-        {photos.map((src, index) => {
+        {productDetails?.photos?.map((src, index) => {
           const isMain = index === 0;
           return (
             <div
@@ -56,18 +53,20 @@ export default function PhotoGridWithModal() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center w-full h-full"
+            className="fixed inset-0 bg-[#202020dc] flex items-center justify-center w-full h-full z-50 p-[2rem_5rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
           >
-            <Image
-              src={Laddu}
-              alt={`Full view ${activePhoto}`}
-              className="rounded-xl shadow-lg object-cover max-h-[90vh] max-w-[90vw]"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative rounded-xl shadow-lg flex justify-center w-full h-full overflow-scroll bg-amber-50">
+              <Image
+                src={activePhoto}
+                alt={`Full view ${activePhoto}`}
+                className="absolute"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
