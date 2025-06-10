@@ -23,13 +23,13 @@ export default function SubscribeSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center text-white p-[2rem] md:p-[4rem]">
+        <div className="flex flex-col items-center relative z-10 text-center text-white p-[2rem] md:p-[4rem]">
           <Heading
             level="h2"
             align="center"
             className="text-[#FDFDFD] mb-[1.5rem]"
           >
-            Join Our Sweet Community
+            Join the Amma-Ma Family
           </Heading>
 
           <Text
@@ -37,8 +37,8 @@ export default function SubscribeSection() {
             align="center"
             className="text-[#FDFDFD] mb-[2rem] max-w-2xl mx-auto"
           >
-            Subscribe for exclusive updates, special offers, and the latest
-            product launches from Amma-ma Foods.
+            Subscribe to receive early access to new launches, exclusive offers,
+            and behind-the-scenes stories from Amma-Ma.
           </Text>
 
           {/* Form */}
@@ -59,8 +59,9 @@ export default function SubscribeSection() {
             </Button>
           </form>
 
-          <Text size="tiny" className="text-[#FDFDFD]">
-            By clicking Sign Up, you agree to our Terms and Conditions.
+          <Text size="tiny" className="text-[#FDFDFD] max-w-lg">
+            No spam - just meaningful updates and sweet surprises crafted for
+            you. By clicking Sign Up, you agree to our Terms and Conditions.
           </Text>
         </div>
       </div>

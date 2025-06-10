@@ -1,29 +1,5 @@
 // // components/TestimonialCard.js
-
-// import Image from "next/image";
 import { Text } from "..";
-
-// export default function TestimonialCard({ name, role, image, content }) {
-//   return (
-//     <div className="rounded-xl shadow-sm hover:shadow-md transition p-6 text-center flex flex-col items-center border-[2px] border-[#000700]">
-//       <div className="w-16 h-16 rounded-full overflow-hidden relative mb-4">
-//         <Image src={image} alt={name} fill className="object-cover" />
-//       </div>
-//       <Text size="regular" weight="medium" className="mb-2 text-gray-800">
-//         {name}
-//       </Text>
-//       <Text size="tiny" weight="normal" className="text-gray-500 mb-4">
-//         {role}
-//       </Text>
-//       <Text size="small" className="text-gray-600 italic">
-//         “{content}”
-//       </Text>
-//     </div>
-//   );
-// }
-
-// components/TestimonialCardV2.js
-
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
 

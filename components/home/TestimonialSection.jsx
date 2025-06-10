@@ -7,31 +7,32 @@ import { Heading, TestimonialCard, Text } from "..";
 
 const testimonials = [
   {
+    name: "Anita Rao",
+    position: "Health Blogger",
+    avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
+    content:
+      "These sweets are an absolute blessing! Guilt-free, nutrient-rich, and bursting with traditional flavor - Amma-Ma is now a part of my daily routine.",
+  },
+  {
+    name: "Rajesh Kumar",
+    position: "Fitness Enthusiast",
+    avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
+    content:
+      "These sweets are an absolute blessing! Guilt-free, nutrient-rich, and bursting with traditional flavor - Amma-Ma is now a part of my daily routine.",
+  },
+  {
     name: "Arjun Mehta",
-    position: "Fitness Coach",
+    position: "Certified Fitness Coach",
     avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
     content:
-      "These sweets are a blessing! Zero guilt and packed with goodness.",
+      "These sweets are an absolute blessing! Guilt-free, nutrient-rich, and bursting with traditional flavor - Amma-Ma is now a part of my daily routine.",
   },
   {
-    name: "Neha Sharma",
-    position: "Wellness Blogger",
+    name: "Nishant Mainwal",
+    position: "Software Engineer",
     avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
     content:
-      "Perfect balance of taste and health. I recommend them to everyone!",
-  },
-  {
-    name: "Ravi Kumar",
-    position: "Yoga Instructor",
-    avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
-    content: "Delicious and nourishing – my go-to snack after sessions!",
-  },
-  {
-    name: "Sneha Das",
-    position: "Nutritionist",
-    avatar: "https://avatars.githubusercontent.com/u/80949652?v=4",
-    content:
-      "A clean treat that’s actually tasty! I keep coming back for more.",
+      "These sweets are an absolute blessing! Guilt-free, nutrient-rich, and bursting with traditional flavor - Amma-Ma is now a part of my daily routine.",
   },
 ];
 
@@ -70,10 +71,10 @@ export default function TestimonialSection() {
     >
       <div className="max-w-4xl mx-auto text-center mb-12">
         <Heading level="h2" align="center" className="mb-4">
-          Customers Love Our Recipes
+          See Why Everyone's Talking <br /> About Amma-Ma
         </Heading>
         <Text size="medium" className="max-w-2xl mx-auto ">
-          These sweets have transformed my dessert experience!
+          "Warning: reading these reviews might cause sweet cravings."
         </Text>
       </div>
 

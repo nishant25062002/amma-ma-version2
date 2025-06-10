@@ -1,11 +1,11 @@
-"use client";
 // components/Footer.jsx
+"use client";
 
 import {
   FaFacebookF,
   FaInstagram,
-  FaXTwitter,
-  FaLinkedinIn,
+  // FaXTwitter,
+  // FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa6";
 import { Button, Text } from "..";
@@ -81,13 +81,20 @@ export default function Footer() {
             © 2024 Amma-ma Foods. All rights reserved.
           </Text>
           <div className="flex flex-col md:flex-row gap-[1.5rem] justify-center md:justify-normal !text-[#FDFDFD]">
-            <a
-              href="#"
-              className="text-[0.875rem] leading-[150%] font-inter underline"
-            >
-              Privacy Policy
-            </a>
-            <a
+            {[
+              "Allergen Advisory",
+              "Privacy Policy",
+              "Terms of Service",
+              "Cookie Settings",
+            ].map((tab, index) => (
+              <div
+                key={index}
+                className="text-[0.875rem] leading-[150%] font-inter underline cursor-pointer"
+              >
+                {tab}
+              </div>
+            ))}
+            {/* <a
               href="#"
               className="text-[0.875rem] leading-[150%] font-inter underline"
             >
@@ -98,14 +105,14 @@ export default function Footer() {
               className="text-[0.875rem] leading-[150%] font-inter underline"
             >
               Cookie Settings
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="flex items-center gap-4 text-xl text-[#FDFDFD]">
           <FaFacebookF className="cursor-pointer" />
           <FaInstagram className="cursor-pointer" />
-          <FaXTwitter className="cursor-pointer" />
-          <FaLinkedinIn className="cursor-pointer" />
+          {/* <FaXTwitter className="cursor-pointer" /> */}
+          {/* <FaLinkedinIn className="cursor-pointer" /> */}
           <FaYoutube className="cursor-pointer" />
         </div>
       </div>

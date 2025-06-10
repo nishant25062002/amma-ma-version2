@@ -37,9 +37,8 @@ export default function HeroFeatureSection({
             level="h3"
             align="left"
             className="mb-[1.25rem] md:mb-[1.5rem]"
-          >
-            {heading}
-          </Heading>
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
 
           <Text
             size="medium"

@@ -14,12 +14,14 @@ export default function CtaSection() {
         className="max-w-4xl mx-auto"
       >
         <Heading level="h2" align="center" className="mb-[1.5rem]">
-          Discover Our Delicious Sweets
+          Start Your Sweet Journey Today
         </Heading>
 
         <Text size="regular" className="mb-[2rem] max-w-2xl mx-auto">
-          Indulge in our guilt-free, sugar-free South Indian sweets made with
-          love and premium ingredients.
+          Indulge in Amma-Ma's handcrafted, sugar-free South Indian sweets -
+          made with pure ingredients and traditional love. Perfect for mindful
+          snacking, thoughtful gifting, or simply treating yourself without
+          compromise. Your sweet journey begins here.
         </Text>
 
         <div className="flex flex-col sm:flex-row justify-center gap-[1rem]">

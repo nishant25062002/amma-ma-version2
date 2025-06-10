@@ -1,5 +1,5 @@
 // components/FaqSection.jsx
-import { Faq, Heading, Text } from "@/components";
+import { Button, Faq, Heading, Text } from "@/components";
 import { faqData } from "@/data/global";
 
 export default function FaqSection() {
@@ -20,6 +20,15 @@ export default function FaqSection() {
         {faqData.map((faq, index) => (
           <Faq key={index} faq={faq} index={index} />
         ))}
+      </div>
+      <div className="flex flex-col items-center mt-[3rem] md:mt-[5rem]">
+        <Heading level="h4" align="center" className="mb-[1rem]">
+          Still have questions?
+        </Heading>
+        <Text size="medium" align="center" className="mb-[1.5rem]">
+          We're happy to assist you with any inquiries.
+        </Text>
+        <Button secondary>Contact</Button>
       </div>
     </section>
   );

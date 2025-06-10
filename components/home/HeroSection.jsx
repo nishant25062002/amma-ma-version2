@@ -26,7 +26,7 @@ const SuperSeedsCard = ({ data }) => {
     <div className="flex flex-col items-center rounded-lg">
       <div className="w-[15rem] h-[15rem] rounded-full border-[4px] border-[#D4A850] overflow-hidden relative">
         <Image
-          src={data.image} // ensure this exists in /public/images
+          src={data.image}
           alt="Super Seeds"
           className="absolute object-cover"
         />
@@ -37,8 +37,8 @@ const SuperSeedsCard = ({ data }) => {
       </Heading>
 
       <ul className="flex flex-col text-[#0C4539] mt-[0.5rem]">
-        {data.points.map((point) => (
-          <Heading as="h6" level="h6" className="flex items-center ">
+        {data.points.map((point, index) => (
+          <Heading as="h6" level="h6" className="flex items-center" key={index}>
             <TbPointFilled className="mr-2" />
             {point}
           </Heading>

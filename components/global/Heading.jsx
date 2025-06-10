@@ -27,8 +27,8 @@ const headingStyles = {
 
 // 👇 Map for font families
 const fontFamilies = {
-  protest: "font-Libre", // Protest Riot
-  poppins: "font-inter", // Poppins
+  libre: "font-Libre", // Protest Riot
+  inter: "font-inter", // Poppins
 };
 
 // font-thin
@@ -53,12 +53,13 @@ const fontFamilies = {
 export default function Heading({
   as = "h2",
   level = "h2",
-  family = "protest", // default to Protest Riot
+  family = "libre", // default to Protest Riot
   weight = "normal",
   align = "left",
   colorClass = "text-[#0C4539]",
   className = "",
   children,
+  ...rest
 }) {
   const Tag = as;
   const style = headingStyles[level] || headingStyles.h2;
@@ -78,5 +79,9 @@ export default function Heading({
     .filter(Boolean)
     .join(" ");
 
-  return <Tag className={classes}>{children}</Tag>;
+  return (
+    <Tag className={classes} {...rest}>
+      {children}
+    </Tag>
+  );
 }

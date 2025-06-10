@@ -162,23 +162,51 @@ export const splitFeatureData = [
 
 export const HeroFeatureData = [
   {
-    title: "Heritage",
-    heading: "Crafting Authenticity Through Time-Honoured Recipes",
-    desc: `At Amma-ma Foods, we celebrate the rich traditions of South Indian sweets, lovingly crafted from age-old recipes. Our passion for authenticity and quality shines through every bite, inviting you to indulge in guilt-free delights.`,
+    title: "Our Roots",
+    heading: "Timeless Recipes. <br/> Uncompromised Quality.",
+    desc: `At Amma-Ma Foods, we honour the timeless traditions of South Indian sweet-making. Each laddoo is lovingly handcrafted using age-old recipes passed down through generations.
+    <br/>
+    With a commitment to purity and wellness, our sweets are free from refined sugar and preservatives - offering an authentic, guilt-free indulgence in every bite.`,
+    imageSrc: Laddu0,
+    imageAlt: "Laddoo and love",
+  },
+  {
+    title: "Slow-Made Goodness",
+    heading: "Crafted by Hand. <br/> Guided by Heritage.",
+    desc: `At Amma-Ma Foods, every laddoo is handcrafted with devotion to time-tested techniques. We honour traditional methods not just to preserve flavour, but to preserve feeling - the kind passed from grandmother to kitchen to you.
+    <br/>
+    Each batch is made in small quantities with care, ensuring every bite reflects the love and legacy we proudly carry forward.
+    `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
   },
   {
     title: "Wholesome",
-    heading: "Crafted with Care and Authenticity",
-    desc: `At Amma-ma Foods, we honour the rich heritage of South Indian sweets, using only the finest, ethically sourced ingredients. Each product reflects our commitment to quality and health, ensuring a delightful experience without compromise.`,
+    heading: "Rediscover Sweets That Nourish",
+    desc: `Experience the rich taste of traditional South Indian sweets - without the guilt. Crafted with pure, natural ingredients and sweetened with dates and dry fruits, Amma-Ma laddoos offer a perfect balance of indulgence and wellness. 
+    <br/>
+    Free from preservatives and refined sugar, every bite supports your health, naturally.
+    `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
   },
   {
-    title: "Handmade",
-    heading: "Crafted with Love and Care",
-    desc: `At Amma-ma Foods, every sweet is lovingly handmade to preserve its authentic essence. Our commitment to traditional methods ensures that each bite reflects our rich heritage.`,
+    title: "Wholesome",
+    heading: "Naturally Sweet. <br/> Honestly Healthy.",
+    desc: `Our sweets are sweetened by nature - no refined sugar, no shortcuts. 
+    <br/>
+    Just the wholesome goodness of dry fruits, seeds, and ancient ingredients that support your well-being.
+    `,
+    imageSrc: Laddu0,
+    imageAlt: "Laddoo and love",
+  },
+  {
+    title: "Wholesome",
+    heading: "Small Bites, Big Benefits",
+    desc: `Each laddoo is packed with fiber, healthy fats, and essential nutrients - supporting heart health, digestion, and sustained energy.
+    <br/>
+    It is not just a sweet - it is smart nourishment, the Amma-Ma way.
+    `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
   },
@@ -256,28 +284,42 @@ export const footerLinks = [
 
 export const faqData = [
   {
-    question: "What is the shelf life?",
+    question: "Are your sweets really sugar-free?",
     answer:
-      "Our sugar-free sweets have a shelf life of approximately three months when stored correctly. Keep them in a cool, dry place away from direct sunlight. For the best taste, consume them within the first month.",
+      "Yes! We use only dates and jaggery - no refined sugar, no shortcuts.",
   },
   {
-    question: "How should I store?",
+    question: "Where are Amma-Ma sweets made?",
     answer:
-      "Store our sweets in an airtight container to maintain freshness. A cool, dry environment is ideal for preserving their texture and flavour. Avoid refrigeration, as it may alter the consistency.",
+      "All our sweets are handcrafted in the UK using ethically sourced ingredients.",
   },
   {
-    question: "Are there allergens present?",
+    question: "Are your products suitable for kids?",
     answer:
-      "Our sweets are made with natural ingredients, but they may contain nuts and dried fruits. Always check the ingredient list for specific allergen information. If you have allergies, please consult with us before consumption.",
+      "Absolutely! Amma-Ma laddoos are packed with nuts, seeds, and natural sweetness - a great snack for all ages.",
   },
   {
-    question: "Can I gift these?",
+    question: "Do you offer vegan options?",
     answer:
-      "Absolutely! Our sugar-free sweets make perfect gifts for any occasion. You can choose from a variety of flavours and packaging options to suit your gifting needs.",
+      "Yes, many of our products are naturally vegan. Please check each product page for more details.",
   },
   {
-    question: "Are there allergens present?",
+    question: "How long do the laddoos stay fresh?",
     answer:
-      "We're here to help! If you have any further questions, please reach out to our customer service team. Your satisfaction is our priority.",
+      "Our sweets are best enjoyed within 8 to 10 days of delivery. Store them in a cool, dry place in an airtight container.",
+  },
+  {
+    question: "Do you ship across the UK?",
+    answer: "Yes, we deliver across the UK with fast and secure shipping.",
+  },
+  {
+    question: "Can I gift Amma-Ma sweets to someone?",
+    answer:
+      "Yes! Our sweets make perfect gifts. You can add a note at checkout for a personal touch.",
+  },
+  {
+    question: "How are Amma-Ma sweets packaged?",
+    answer:
+      "With care and sustainability in mind - our packaging is minimal, eco-conscious, and food-safe.",
   },
 ];
