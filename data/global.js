@@ -323,3 +323,47 @@ export const faqData = [
       "With care and sustainability in mind - our packaging is minimal, eco-conscious, and food-safe.",
   },
 ];
+
+export const ammaMaTimeline = [
+  {
+    title: "But here, I saw a problem:",
+    type: "text",
+    content:
+      "Students, professionals, parents – rushing through life, living on chips and noodles, too tired to cook, too busy to care. Not by choice, but because life doesn't slow down.",
+  },
+  {
+    title: "That's why I started Amma-Ma.",
+    type: "text",
+    content:
+      "To offer what Amma once gave me – handmade, sugar-free, nutritious sweets crafted with love and purpose.",
+  },
+  {
+    title: "Each laddoo is packed with:",
+    type: "list",
+    content: [
+      "Protein from nuts",
+      "Natural sweetness from dates",
+      "Iron and fiber from seeds and ragi",
+      "Clean energy without the sugar crash",
+    ],
+  },
+  {
+    title: "Amma-ma is here:",
+    type: "list",
+    content: [
+      "For the student skipping meals.",
+      "For the mother managing it all.",
+      "For the father looking for better snacks.",
+      "For anyone trying to eat better – but doesn't know where to start.",
+    ],
+  },
+  {
+    title: "Amma-ma brings you:",
+    type: "list",
+    content: [
+      "A bite of wellness.",
+      "A memory of home.",
+      "A gift of real nutrition – in every sweet.",
+    ],
+  },
+];

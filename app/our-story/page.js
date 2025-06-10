@@ -1,15 +1,10 @@
 import {
   Navbar,
-  TestimonialSection,
   SubscribeSection,
   Footer,
   VideoSection,
-  LegacySection,
-  MissionSection,
-  HeroFeature,
   CtaSection,
-  StoryFeatureSection,
-  CommunityAudienceSection,
+  StoryWithTimeline,
 } from "@/components";
 
 export default function OurStoryPage() {
@@ -21,26 +16,29 @@ export default function OurStoryPage() {
       {/* VideoSection */}
       <VideoSection />
 
+      {/* StoryWithTimeline */}
+      <StoryWithTimeline />
+
       {/* LegacySection */}
-      <LegacySection />
+      {/* <LegacySection /> */}
 
       {/* StoryFeatureSection */}
-      <StoryFeatureSection />
+      {/* <StoryFeatureSection /> */}
 
       {/* HeroFeature */}
       {/* <HeroFeature /> */}
 
       {/* MissionSection */}
-      <MissionSection />
+      {/* <MissionSection /> */}
 
       {/* TimelineSection */}
       {/* <TimelineSection /> */}
 
       {/*  This section is new in present version*/}
-      <CommunityAudienceSection />
+      {/* <CommunityAudienceSection /> */}
 
       {/* TestimonialSection */}
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
 
       {/* <FeatureSection /> */}
 
