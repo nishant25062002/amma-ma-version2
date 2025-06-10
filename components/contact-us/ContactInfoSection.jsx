@@ -1,7 +1,9 @@
 "use client";
 
+import { scrollToId } from "@/lib/scrollToId";
 import { Heading, Text } from "..";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import {
   HiOutlineMail,
   HiOutlinePhone,
@@ -10,6 +12,15 @@ import {
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function ContactInfoSection() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const pathname = window.location.pathname;
+      const segments = pathname.split("/").filter(Boolean);
+      const id = segments[segments.length - 1];
+      scrollToId(id);
+    }
+  }, []);
+
   const InfoData = [
     {
       icon: <HiOutlineMail className="text-xl" />,
@@ -53,7 +64,10 @@ export default function ContactInfoSection() {
     },
   ];
   return (
-    <section className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto">
+    <section
+      className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto"
+      id="contact-info"
+    >
       <div className="flex flex-col gap-[3rem] md:gap-[5rem] items-start">
         {/* Left Side - Contact Info */}
         <motion.div

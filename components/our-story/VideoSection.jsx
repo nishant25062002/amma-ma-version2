@@ -1,26 +1,25 @@
 import React from "react";
 import { Heading, Text } from "..";
 import Image from "next/image";
-import { Laddu0 } from "@/public";
+import { AmmaMa, Laddu0 } from "@/public";
 
 const VideoSection = () => {
   return (
-    <div className="relative w-full h-[calc(80vh-4.6rem)] flex items-center justify-center text-white text-center">
+    <div className="w-full h-fit flex items-center justify-center text-white text-center">
       {/* Background Image */}
       <Image
-        src={Laddu0}
+        src={AmmaMa}
         alt="Background Video"
-        layout="fill"
-        objectFit="cover"
         quality={100}
-        className="z-0"
+        className="w-full z-0 object-contain"
+        priority
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0000004f] z-10"></div>
+      {/* <div className="absolute inset-0 bg-[#0000004f] z-10"></div> */}
 
       {/* Content */}
-      <div className="flex flex-col items-center justify-center relative z-20 px-6 md:px-0 text-center">
+      {/* <div className="flex flex-col items-center justify-center relative z-20 px-6 md:px-0 text-center">
         <Heading
           level="h1"
           as="h1"
@@ -36,15 +35,15 @@ const VideoSection = () => {
         </Text>
 
         <div className="flex gap-4 justify-center mt-[2rem]">
-          {/* <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
+          <Button className="!bg-white !text-black font-semibold !hover:bg-gray-100 transition">
             Order Now
-          </Button> */}
-          {/* <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
+          </Button>
+          <Button className="!bg-transparent border border-white !text-white font-semibold !hover:bg-white !hover:text-black transition">
             {" "}
             Learn More
-          </Button> */}
+          </Button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

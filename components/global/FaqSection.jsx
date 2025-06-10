@@ -1,8 +1,17 @@
 // components/FaqSection.jsx
+"use client";
+
 import { Button, Faq, Heading, Text } from "@/components";
 import { faqData } from "@/data/global";
+import { useRouter } from "next/navigation";
 
 export default function FaqSection() {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/contact-us#contact-info");
+  };
+
   return (
     <section
       className="max-w-4xl w-full mx-auto py-[4rem] md:py-[5rem] px-4 md:px-8 flex flex-col items-center"
@@ -28,7 +37,9 @@ export default function FaqSection() {
         <Text size="medium" align="center" className="mb-[1.5rem]">
           We're happy to assist you with any inquiries.
         </Text>
-        <Button secondary>Contact</Button>
+        <Button onClick={handleRedirect} secondary>
+          Contact
+        </Button>
       </div>
     </section>
   );
