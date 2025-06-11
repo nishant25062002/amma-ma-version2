@@ -37,7 +37,7 @@ export default function PhotoGridWithModal({ productDetails }) {
           {productDetails?.title}
         </Text>
       </div>
-      <div className="grid grid-cols-4 grid-rows-2 gap-2 relative rounded-xl overflow-hidden h-[35rem]">
+      <div className="grid grid-cols-4 grid-rows-2 gap-2 relative rounded-xl overflow-hidden h-[15rem] md:h-[35rem]">
         {productDetails?.photos?.map((src, index) => {
           const isMain = index === 0;
           return (
@@ -59,7 +59,7 @@ export default function PhotoGridWithModal({ productDetails }) {
                 <div className="absolute bottom-2 right-2 z-10">
                   <button
                     onClick={() => setIsOpen(true)}
-                    className="text-sm font-medium px-4 py-1.5 rounded-full border border-black bg-white hover:bg-gray-100 transition"
+                    className="text-xs md:text-sm font-medium px-4 py-1.5 rounded-full border border-black bg-white hover:bg-gray-100 transition"
                   >
                     Show all photos
                   </button>
