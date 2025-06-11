@@ -8,7 +8,7 @@ import { Button, Heading, Text } from "..";
 export default function ContactSection() {
   return (
     <section className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-[3rem]">
+      <div className="flex md:flex-row items-center justify-between gap-[3rem]">
         {/* Text Block */}
         <motion.div
           className="flex-1"
@@ -41,7 +41,7 @@ export default function ContactSection() {
 
         {/* Image Block */}
         <motion.div
-          className="flex-1 w-full h-[30.5rem] md:h-[32.5rem] rounded-[1rem] overflow-hidden relative"
+          className="flex-1 w-full h-[30.5rem] md:h-[32.5rem] rounded-[1rem] overflow-hidden relative hidden md:block"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
