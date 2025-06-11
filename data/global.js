@@ -169,6 +169,8 @@ export const HeroFeatureData = [
     With a commitment to purity and wellness, our sweets are free from refined sugar and preservatives - offering an authentic, guilt-free indulgence in every bite.`,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
+    buttonText: "Learn more",
+    redirect: "/our-story",
   },
   {
     title: "Slow-Made Goodness",
@@ -179,6 +181,8 @@ export const HeroFeatureData = [
     `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
+    buttonText: "Learn more",
+    redirect: "/our-story",
   },
   {
     title: "Wholesome",
@@ -189,6 +193,8 @@ export const HeroFeatureData = [
     `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
+    buttonText: "Learn more",
+    redirect: "/our-story",
   },
   {
     title: "Wholesome",
@@ -199,6 +205,8 @@ export const HeroFeatureData = [
     `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
+    buttonText: "Learn more",
+    redirect: "/our-story",
   },
   {
     title: "Wholesome",
@@ -209,6 +217,8 @@ export const HeroFeatureData = [
     `,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
+    buttonText: "Learn more",
+    redirect: "/our-story",
   },
   {
     title: "Ancient",
@@ -228,6 +238,7 @@ Ghee is a type of clarified butter, traditionally made in India by slowly simmer
 Amma-Ma uses pure cow’s ghee, just like it’s been made in Indian kitchens for centuries — with patience and care. We use ghee instead of oils or butter because it’s natural, wholesome, and has been trusted by generations for strength and vitality.`,
     imageSrc: Ghee,
     imageAlt: "Ghee",
+    showMoreAfter: 290,
   },
   {
     title: "Natural",
@@ -246,6 +257,7 @@ Jaggery is a traditional, unrefined sweetener made by boiling sugarcane juice un
 We source pure Indian jaggery, just like what’s used in village homes — golden, earthy, and naturally sweet.Unlike white sugar, jaggery supports your health and adds real depth of flavour — making Amma-Ma laddoos sweet and smart.`,
     imageSrc: Jaggery,
     imageAlt: "Jaggery",
+    showMoreAfter: 290,
   },
 ];
 

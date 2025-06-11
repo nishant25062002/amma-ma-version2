@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Button, Heading, Text } from "..";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function HeroFeatureSection({
   className = "",
@@ -13,7 +15,17 @@ export default function HeroFeatureSection({
   reverse = false,
   imageSrc,
   imageAlt,
+  buttonText = "",
+  redirect = "/",
+  showMoreAfter = undefined,
 }) {
+  const router = useRouter();
+  const [showMore, setShowMore] = useState(false);
+
+  const handleRedirect = () => {
+    router.push(redirect);
+  };
+
   return (
     <section className={`flex flex-col py-[3rem] md:py-[5rem] ${mainClass}`}>
       <div
@@ -43,14 +55,30 @@ export default function HeroFeatureSection({
           <Text
             size="medium"
             className="mb-[1.5rem] md:mb-[2.5rem]"
-            dangerouslySetInnerHTML={{ __html: desc }}
+            dangerouslySetInnerHTML={{
+              __html: !showMore ? desc.slice(0, showMoreAfter) + "..." : desc,
+            }}
           />
 
-          <div className="flex justify-start">
-            <Button variant="outline" className="!border-black !text-black">
-              Shop Now
+          {buttonText && (
+            <Button
+              variant="outline"
+              className="!border-black !text-black"
+              onClick={handleRedirect}
+            >
+              {buttonText}
             </Button>
-          </div>
+          )}
+
+          {showMoreAfter && (
+            <Button
+              variant="outline"
+              className="!border-black !text-black"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "Show less" : "Show more"}
+            </Button>
+          )}
         </motion.div>
 
         {/* Image Section */}
