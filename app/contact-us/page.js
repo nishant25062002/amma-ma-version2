@@ -6,6 +6,7 @@ import {
   Navbar,
   SubscribeSection,
 } from "@/components";
+import TrustBadgesSlider from "@/components/global/popup/TrustBadgesSlider";
 import React from "react";
 
 const ContactUs = () => {
@@ -16,6 +17,9 @@ const ContactUs = () => {
 
       <ContactSection />
       <BrandGrid />
+
+      <TrustBadgesSlider />
+
       <ContactInfoSection />
       <SubscribeSection />
       <Footer />
