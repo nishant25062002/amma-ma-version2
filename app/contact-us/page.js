@@ -5,8 +5,8 @@ import {
   Footer,
   Navbar,
   SubscribeSection,
+  TrustBadgesSlider,
 } from "@/components";
-import TrustBadgesSlider from "@/components/global/popup/TrustBadgesSlider";
 import React from "react";
 
 const ContactUs = () => {

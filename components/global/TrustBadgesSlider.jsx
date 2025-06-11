@@ -75,12 +75,12 @@ const TrustBadgesSlider = () => {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="keen-slider__slide rounded-xl shadow-md flex flex-col items-center"
+              className="keen-slider__slide flex flex-col items-center"
             >
-              <Heading level="h6" className="mb-[1rem]">
+              <Heading level="h6" align="center" className="mb-[1rem]">
                 {badge.title}
               </Heading>
-              <Text>{badge.desc}</Text>
+              <Text align="center">{badge.desc}</Text>
             </div>
           ))}
         </div>

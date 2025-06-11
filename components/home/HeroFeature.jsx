@@ -4,7 +4,7 @@ import { HeroFeatureData } from "@/data/global";
 
 const HeroFeature = () => {
   return (
-    <div className="flex flex-col py-[1rem] md:py-[2rem] bg-[#FFC06D]">
+    <div className="flex flex-col py-[1rem] md:py-[2rem] bg-[#FFC06D] max-w-full overflow-hidden">
       {HeroFeatureData.map((data, index) => (
         <HeroFeatureSection
           key={index}
