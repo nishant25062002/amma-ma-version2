@@ -4,10 +4,18 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoIosArrowForward } from "react-icons/io";
+import { Text } from "..";
+import { useRouter } from "next/navigation";
 
 export default function PhotoGridWithModal({ productDetails }) {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [activePhoto, setActivePhoto] = useState(null);
+
+  const handleRedirect = () => {
+    router.push("/products");
+  };
 
   const openModal = (img) => {
     setActivePhoto(img);
@@ -16,6 +24,19 @@ export default function PhotoGridWithModal({ productDetails }) {
 
   return (
     <section className="py-[4rem] md:py-[6rem] px-4 md:px-10 max-w-7xl mx-auto">
+      <div className="flex gap-[1rem] items-center mb-[1.5rem]">
+        <Text
+          size="small"
+          onClick={handleRedirect}
+          className="cursor-pointer hover:underline"
+        >
+          Products
+        </Text>
+        <IoIosArrowForward className="w-[1rem] h-[1rem]" />
+        <Text size="small" weight="semibold">
+          {productDetails?.title}
+        </Text>
+      </div>
       <div className="grid grid-cols-4 grid-rows-2 gap-2 relative rounded-xl overflow-hidden h-[35rem]">
         {productDetails?.photos?.map((src, index) => {
           const isMain = index === 0;
