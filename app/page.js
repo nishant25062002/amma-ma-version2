@@ -51,7 +51,7 @@ export default function Home() {
       {/* CtaSection */}
       <CtaSection />
 
-      <FaqSection />
+      <FaqSection className="!pt-0" />
 
       {/* SubscribeSection */}
       <SubscribeSection />

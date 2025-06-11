@@ -15,9 +15,9 @@ const logos = [
   { src: FullMetaLogo, alt: "Relume", name: "facebook" },
 ];
 
-export default function BrandGrid() {
+export default function BrandGrid({ className = "" }) {
   return (
-    <section className="w-full bg-white py-[3rem] md:py-[5rem]">
+    <section className={`w-full bg-white py-[3rem] md:py-[5rem] ${className}`}>
       <div className="flex flex-col items-center justify-center gap-[1.25rem] md:gap-[3rem] max-width-1200 px-[1.25rem] text-center">
         <Heading as="h6" level="h6" family="poppins" weight="semibold">
           Trusted by renowned brands and partners worldwide

@@ -16,7 +16,7 @@ const ContactUs = () => {
       <div className="h-[4.6rem]" />
 
       <ContactSection />
-      <BrandGrid />
+      <BrandGrid className="!pt-0" />
 
       <TrustBadgesSlider />
 

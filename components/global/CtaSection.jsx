@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CtaSection() {
   return (
-    <section className="py-[2rem] md:py-[5rem] px-4 text-center">
+    <section className="py-[3rem] md:py-[5rem] px-4 text-center">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
