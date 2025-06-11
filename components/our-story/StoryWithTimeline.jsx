@@ -5,11 +5,11 @@ import { ammaMaTimeline } from "@/data/global";
 const StoryWithTimeline = () => {
   return (
     <section className="hero-gradient">
-      <div className="max-w-3xl mx-auto flex flex-col items-center gap-[1rem] py-[3rem] md:py-[7rem]">
+      <div className="max-w-3xl mx-auto flex flex-col items-center gap-[1rem] py-[3rem] md:py-[7rem] px-4">
         <Text size="regular" weight="semibold" className="text-[#000700]">
           Our Story
         </Text>
-        <Heading level="h1" className="mb-[0.5rem]">
+        <Heading level="h1" align="center" className="mb-[0.5rem]">
           The Amma-Ma Story
         </Heading>
         <Text align="center">
@@ -20,9 +20,9 @@ const StoryWithTimeline = () => {
       </div>
 
       <div className="pb-[3rem] md:pb-[7rem]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start px-4">
           {/* Left Section */}
-          <div className="md:pr-[5rem] sticky top-[7rem] self-start">
+          <div className="md:pr-[5rem] md:sticky top-[7rem] self-start">
             <Heading level="h6" className="mb-[1rem]">
               A Sweet Realisation
             </Heading>
@@ -38,7 +38,7 @@ const StoryWithTimeline = () => {
           </div>
 
           {/* Right Section - Timeline */}
-          <div className="relative pl-[3rem] md:pl-[5rem] border-l-3 border-[#D4A850] space-y-8 flex flex-col gap-[2rem] ">
+          <div className="relative pl-[3rem] md:pl-[5rem] border-l-3 border-[#D4A850] space-y-8 flex flex-col gap-[2rem]">
             {ammaMaTimeline.map((item, index) => (
               <div key={index} className="relative">
                 <div className="absolute -left-[4.05rem] md:-left-[6.05rem] w-[2rem] h-[2rem] top-0 rounded-full bg-[#f1debe] flex items-center justify-center">
