@@ -31,7 +31,7 @@ export default function WhyUsSection() {
         </div>
 
         {/* Right Side */}
-        <div className="pl-[3.75rem]">
+        <div className="md:pl-[3.75rem]">
           <Text size="medium">
             Discover the joy of our sugar-free South Indian sweets, crafted with
             care using natural ingredients. Each bite is a celebration of

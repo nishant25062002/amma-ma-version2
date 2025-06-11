@@ -61,12 +61,11 @@ const HeroSection = () => {
           <br /> eat should heal, not harm.
         </Text>
 
-        <div className="relative h-[30rem] w-[40rem]">
+        <div className="w-full max-w-full md:w-[40rem]">
           <Image
             src={LadduInBowl}
             alt="Background"
-            fill
-            className="absolute object-cover z-0"
+            className="object-contain z-0"
             quality={100}
             priority
           />
@@ -75,13 +74,13 @@ const HeroSection = () => {
         {/* Extend Hero */}
 
         <div className="pt-[3rem]">
-          <div className="flex items-center gap-[2rem]">
-            <div className="bg-[#D4A850] w-[18rem] h-[0.25rem] rounded-4xl" />
+          <div className="flex items-center gap-[2rem] w-full">
+            <div className="bg-[#D4A850] w-1/3 md:w-[18rem] h-[0.25rem] rounded-4xl" />
             <Heading>Our Offerings</Heading>
-            <div className="bg-[#D4A850] w-[18rem] h-[0.25rem] rounded-4xl" />
+            <div className="bg-[#D4A850] w-1/3 md:w-[18rem] h-[0.25rem] rounded-4xl" />
           </div>
 
-          <div className="flex flex-col items-center md:flex-row md:justify-between pt-[4rem]">
+          <div className="flex flex-col gap-[4rem] md:gap-0 items-center md:flex-row md:justify-between pt-[4rem]">
             {benefitHighlights.map((data, index) => (
               <SuperSeedsCard key={index} data={data} />
             ))}
