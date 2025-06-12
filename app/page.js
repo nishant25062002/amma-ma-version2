@@ -11,6 +11,7 @@ import {
   HeroFeature,
   WhyUsSection,
   FaqSection,
+  HeroSectionExtend,
 } from "@/components";
 import { scrollToId } from "@/lib/scrollToId";
 import { useEffect } from "react";
@@ -31,6 +32,7 @@ export default function Home() {
       <div className="h-[4.6rem]" />
 
       <Hero />
+      <HeroSectionExtend />
       {/*  This section is not present in present version*/}
       {/* <BrandGrid /> */}
 
