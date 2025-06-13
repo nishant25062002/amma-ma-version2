@@ -49,12 +49,7 @@ export default function SubscribeSection() {
               className="px-4 py-2 rounded-md border border-white bg-transparent text-white placeholder-[#FDFDFDFDFDFD99] focus:outline-none focus:ring-2 focus:ring-green-400 w-full md:w-[23.8rem]"
               required
             />
-            <Button
-              type="submit"
-              variant="solid"
-              color="green"
-              className="w-full md:w-fit"
-            >
+            <Button type="submit" variant="solid" className="w-full md:w-fit">
               Sign Up
             </Button>
           </form>

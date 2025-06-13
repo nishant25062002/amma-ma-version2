@@ -1,21 +1,14 @@
 "use client";
-
 import React from "react";
-import { useRouter } from "next/navigation";
 
 const Button = ({
   children = "Shop",
   className = "",
   variant = "solid", // 'solid' | 'outline'
-  onClick = undefined,
+  onClick = () => {},
   secondary = false,
+  ...rest
 }) => {
-  const router = useRouter();
-
-  const redirectToProducts = () => {
-    router.push("/products");
-  };
-
   // Tailwind styles based on variant
   const baseStyles =
     "font-inter font-[500] px-6 py-2 h-[40px] text-sm min-w-[5.2rem] rounded-[0.75rem] transition flex items-center justify-center cursor-pointer";
@@ -30,7 +23,8 @@ const Button = ({
   return (
     <button
       className={`${baseStyles} ${variants[variant]} ${className}`}
-      onClick={onClick === undefined ? redirectToProducts : onClick}
+      onClick={onClick}
+      {...rest}
     >
       {children}
     </button>
