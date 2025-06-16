@@ -166,6 +166,7 @@ export const HeroFeatureData = [
     heading: "Timeless Recipes. <br/> Uncompromised Quality.",
     desc: `At Amma-Ma Foods, we honour the timeless traditions of South Indian sweet-making. Each laddoo is lovingly handcrafted using age-old recipes passed down through generations.
     <br/>
+     <br/>
     With a commitment to purity and wellness, our sweets are free from refined sugar and preservatives - offering an authentic, guilt-free indulgence in every bite.`,
     imageSrc: Laddu0,
     imageAlt: "Laddoo and love",
@@ -177,6 +178,7 @@ export const HeroFeatureData = [
     heading: "Crafted by Hand. <br/> Guided by Heritage.",
     desc: `At Amma-Ma Foods, every laddoo is handcrafted with devotion to time-tested techniques. We honour traditional methods not just to preserve flavour, but to preserve feeling - the kind passed from grandmother to kitchen to you.
     <br/>
+     <br/>
     Each batch is made in small quantities with care, ensuring every bite reflects the love and legacy we proudly carry forward.
     `,
     imageSrc: Laddu0,
@@ -188,6 +190,7 @@ export const HeroFeatureData = [
     title: "Wholesome",
     heading: "Rediscover Sweets That Nourish",
     desc: `Experience the rich taste of traditional South Indian sweets - without the guilt. Crafted with pure, natural ingredients and sweetened with dates and dry fruits, Amma-Ma laddoos offer a perfect balance of indulgence and wellness. 
+    <br/>
     <br/>
     Free from preservatives and refined sugar, every bite supports your health, naturally.
     `,
@@ -201,6 +204,7 @@ export const HeroFeatureData = [
     heading: "Naturally Sweet. <br/> Honestly Healthy.",
     desc: `Our sweets are sweetened by nature - no refined sugar, no shortcuts. 
     <br/>
+    <br/>
     Just the wholesome goodness of dry fruits, seeds, and ancient ingredients that support your well-being.
     `,
     imageSrc: Laddu0,
@@ -213,6 +217,7 @@ export const HeroFeatureData = [
     heading: "Small Bites, Big Benefits",
     desc: `Each laddoo is packed with fiber, healthy fats, and essential nutrients - supporting heart health, digestion, and sustained energy.
     <br/>
+    <br/>
     It is not just a sweet - it is smart nourishment, the Amma-Ma way.
     `,
     imageSrc: Laddu0,
@@ -224,6 +229,7 @@ export const HeroFeatureData = [
     title: "Ancient",
     heading: "Pure Ghee (Indian Clarified Butter)",
     desc: `At Amma-ma Foods, We don’t just make sweets — we use ancient, natural ingredients that truly nourish your body.
+<br/>
 <br/>
 Ghee is a type of clarified butter, traditionally made in India by slowly simmering butter until the water evaporates and milk solids are removed.
 <br/>
@@ -244,7 +250,8 @@ Amma-Ma uses pure cow’s ghee, just like it’s been made in Indian kitchens fo
     title: "Natural",
     heading: "Jaggery (Natural Cane Sugar)",
     desc: `At Amma-ma Foods, We don’t just make sweets — we use ancient, natural ingredients that truly nourish your body.
-
+<br/>
+<br/>
 Jaggery is a traditional, unrefined sweetener made by boiling sugarcane juice until it solidifies — no chemicals, no processing.
 <br/>
 <br/>

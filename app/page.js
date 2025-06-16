@@ -12,6 +12,7 @@ import {
   WhyUsSection,
   FaqSection,
   HeroSectionExtend,
+  TrustBadgesSlider,
 } from "@/components";
 import { scrollToId } from "@/lib/scrollToId";
 import { useEffect } from "react";
@@ -38,6 +39,7 @@ export default function Home() {
 
       {/*  This section is new in present version*/}
       <WhyUsSection />
+      <TrustBadgesSlider />
 
       {/* ProductsSection */}
       <ProductsSection />

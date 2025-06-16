@@ -162,7 +162,7 @@ export default function ProductDetail({ productDetails }) {
             secondary
             onClick={handleAddToCart}
           >
-            {isPresentInCart ? "Remove to Cart" : "Add to Cart"}
+            {isPresentInCart ? "Remove from Cart" : "Add to Cart"}
           </Button>
           <Button
             variant="outline"

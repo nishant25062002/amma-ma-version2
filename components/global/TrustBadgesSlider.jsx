@@ -68,10 +68,11 @@ const TrustBadgesSlider = () => {
   return (
     <section className="py-[3rem] md:py-[5rem] px-4 hero-gradient">
       <div className="max-w-7xl mx-auto flex flex-col items-centers">
-        <Heading level="h4" align="center">
+        {/* <Heading level="h4" align="center">
           Amma-Ma Trust Badges
-        </Heading>
-        <div ref={sliderRef} className="keen-slider mt-[2.5rem]">
+        </Heading> */}
+        {/* mt-[2.5rem] */}
+        <div ref={sliderRef} className="keen-slider">
           {badges.map((badge, index) => (
             <div
               key={index}

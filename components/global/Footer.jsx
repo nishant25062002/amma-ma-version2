@@ -14,14 +14,42 @@ import { Logo } from "@/public";
 import { footerLinks } from "@/data/global";
 import { useRouter } from "next/navigation";
 
+const socialMediaData = [
+  {
+    link: "https://www.facebook.com",
+    title: "Facebook",
+    icon: FaFacebookF,
+  },
+  {
+    link: "https://www.instagram.com/amma_ma_in_london?igsh=OG4zZHFyenJpcmV3&utm_source=qr",
+    title: "Instagram",
+    icon: FaInstagram,
+  },
+  {
+    link: "https://www.youtube.com/@Amma-ma",
+    title: "Youtube",
+    icon: FaYoutube,
+  },
+];
+
 export default function Footer() {
   const router = useRouter();
 
   const handleRedirect = (path) => {
     router.push(path);
   };
+
+  const redirectToUrl = () => {
+    // Open Instagram in a new tab
+    window.open("https://www.instagram.com/amma_ma_in_london", "_blank");
+
+    // Optionally change the current page to black screen
+    document.body.style.backgroundColor = "black";
+    document.body.innerHTML = ""; // remove existing content
+  };
+
   return (
-    <footer className="bg-[#0C4539] border-t border-[#FDFDFD] pt-12">
+    <footer className="bg-[#0C4539] border-t border-[#FDFDFD] py-[3rem] md:py-[5rem]">
       <div className="max-width-1300 flex flex-col px-[1.25rem] md:px-0 md:flex-row gap-[2.5rem] !mb-[6.5rem]">
         {/* Logo */}
         <div className="w-[10.4rem]">
@@ -109,12 +137,37 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-4 text-xl text-[#FDFDFD]">
-          <FaFacebookF className="cursor-pointer" />
-          <FaInstagram className="cursor-pointer" />
+          {/* <FaFacebookF className="cursor-pointer" /> */}
+          {/* <FaInstagram className="cursor-pointer" /> */}
           {/* <FaXTwitter className="cursor-pointer" /> */}
           {/* <FaLinkedinIn className="cursor-pointer" /> */}
-          <FaYoutube className="cursor-pointer" />
+          {/* <FaYoutube className="cursor-pointer" /> */}
+          {socialMediaData.map(({ link, title, icon: Icon }, index) => (
+            <a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={title}
+              className="text-white hover:text-yellow-300 transition-colors text-xl"
+            >
+              <Icon />
+            </a>
+          ))}
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto">
+        <Text size="small" align="center" className="text-[#c5c5c5]">
+          Website built and managed by{" "}
+          <a
+            className="underline font-bold"
+            href="https://masternext-technologies.vercel.app/"
+            target="_blank"
+          >
+            MasterNext Technologies
+          </a>
+        </Text>
       </div>
     </footer>
   );

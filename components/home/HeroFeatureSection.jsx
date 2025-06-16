@@ -52,13 +52,15 @@ export default function HeroFeatureSection({
             dangerouslySetInnerHTML={{ __html: heading }}
           />
 
-          <Text
-            size="medium"
-            className="mb-[1.5rem] md:mb-[2.5rem]"
-            dangerouslySetInnerHTML={{
-              __html: !showMore ? desc.slice(0, showMoreAfter) + "..." : desc,
-            }}
-          />
+          <div className="mb-[1.5rem] md:mb-[2.5rem]">
+            <Text
+              size="medium"
+              dangerouslySetInnerHTML={{
+                __html: !showMore ? desc.slice(0, showMoreAfter) : desc,
+              }}
+            />
+            {showMoreAfter > 0 && !showMore && <Text size="medium">...</Text>}
+          </div>
 
           {buttonText && (
             <Button

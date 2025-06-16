@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 export default function ProductCard({
   id,
@@ -24,6 +25,7 @@ export default function ProductCard({
   const handleAddToCart = () => {
     if (isPresentInCart) {
       dispatch(removeFromCart(id));
+      toast.success("Remove from Cart!");
     } else {
       dispatch(
         addToCart({
@@ -36,6 +38,7 @@ export default function ProductCard({
           weight: 500,
         })
       );
+      toast.success("Added to Cart!");
     }
   };
 
@@ -100,7 +103,7 @@ export default function ProductCard({
         variant={isPresentInCart ? "solid" : "outline"}
         onClick={handleAddToCart}
       >
-        {isPresentInCart ? "Remove to Cart" : "Add to Cart"}
+        {isPresentInCart ? "Remove from Cart" : "Add to Cart"}
       </Button>
     </div>
   );

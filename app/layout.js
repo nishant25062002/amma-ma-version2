@@ -1,4 +1,5 @@
 import ReduxProvider from "@/providers/ReduxProvider";
+import { Toaster } from "sonner";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <ReduxProvider>{children}</ReduxProvider>
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );
