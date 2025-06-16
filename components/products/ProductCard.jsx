@@ -55,7 +55,7 @@ export default function ProductCard({
       <div className="flex flex-col gap-[1rem]" onClick={handleRedirect}>
         {/* Image Container */}
         <div className="relative transition-all duration-250 ease-in-out h-[11.8rem] md:h-[22.5rem] overflow-hidden rounded-[1rem]">
-          <div className="relative w-full h-[11.8rem] md:h-[22.5rem] group-hover:h-[8re m] md:group-hover:h-[16r em] transition-all duration-250 ease-in-out rounded-[1rem] md:group-hover:scale-130">
+          <div className="relative w-full h-[11.8rem] md:h-[22.5rem] transition-all duration-250 ease-in-out rounded-[1rem] md:group-hover:scale-130">
             <Image
               src={image}
               alt={title}
@@ -73,7 +73,7 @@ export default function ProductCard({
           </Text>
         </div>
 
-        <div className="flex justify-between min-h-[6rem] md:min-h-0">
+        <div className="flex justify-between min-h-[6rem] md:min-h-0 gap-[0.5rem] md:gap-0">
           <div>
             <Heading
               level="h6"
