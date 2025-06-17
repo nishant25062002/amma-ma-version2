@@ -5,6 +5,8 @@ const AllergenAdvisory = () => {
   return (
     <main>
       <Navbar />
+      <div className="h-[4.6rem]" />
+
       <AllergenAdvisorySection />
       <Footer />
     </main>

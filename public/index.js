@@ -9,7 +9,7 @@ import Laddu2 from "./assets/gulab-jamun.jpg";
 import Laddu3 from "./assets/laddu-3.jpg";
 import Laddu4 from "./assets/laddu-4.jpg";
 import SectionImage from "./assets/section-image.jpg";
-import Logo from "./assets/logo.svg";
+// import Logo from "./assets/logo.svg";
 import Tailwind_CSS_logo from "./assets/Tailwind_CSS_logo.png";
 import UserIcon from "./assets/UserIcon.svg";
 import ShieldIcon from "./assets/ShieldIcon.svg";
@@ -24,6 +24,7 @@ import HomeBackground from "./assets/home-background.png";
 import Nuts from "./assets/nuts.jpg";
 import Ragi from "./assets/ragi.jpg";
 import UradDal from "./assets/urad-dal.jpg";
+import Logo from "./assets/logo.png";
 
 export {
   HeroBackground,

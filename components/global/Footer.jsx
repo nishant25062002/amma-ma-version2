@@ -39,21 +39,12 @@ export default function Footer() {
     router.push(path);
   };
 
-  const redirectToUrl = () => {
-    // Open Instagram in a new tab
-    window.open("https://www.instagram.com/amma_ma_in_london", "_blank");
-
-    // Optionally change the current page to black screen
-    document.body.style.backgroundColor = "black";
-    document.body.innerHTML = ""; // remove existing content
-  };
-
   return (
     <footer className="bg-[#0C4539] border-t border-[#FDFDFD] py-[3rem] md:py-[5rem]">
       <div className="max-width-1300 flex flex-col px-[1.25rem] md:px-0 md:flex-row gap-[2.5rem] !mb-[6.5rem]">
         {/* Logo */}
         <div className="w-[10.4rem]">
-          <div className="relative w-14 h-6 md:w-20 md:h-8 cursor-pointer">
+          <div className="relative w-[3rem] h-[3rem] cursor-pointer">
             <Image src={Logo} alt="Logo" fill />
           </div>
         </div>
@@ -106,20 +97,21 @@ export default function Footer() {
       <div className="border-t-[2px] border-[#FDFDFD] py-[2rem] px-[1.25rem] md:px-8 flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-[1.5rem] max-width-1200">
         <div className="flex flex-col-reverse md:flex-row gap-[2rem] md:gap-[1.5rem]">
           <Text size="small" className="text-[#FDFDFD]">
-            © 2024 Amma-ma Foods. All rights reserved.
+            © 2025 Amma-ma Foods. All rights reserved.
           </Text>
           <div className="flex flex-col md:flex-row gap-[1.5rem] justify-center md:justify-normal !text-[#FDFDFD]">
             {[
-              "Allergen Advisory",
-              "Privacy Policy",
-              "Terms of Service",
-              "Cookie Settings",
+              { label: "Allergen Advisory", path: "/allergen-advisory" },
+              { label: "Privacy Policy", path: "/" },
+              { label: "Terms of Service", path: "/" },
+              { label: "Cookie Settings", path: "/" },
             ].map((tab, index) => (
               <div
                 key={index}
                 className="text-[0.875rem] leading-[150%] font-inter underline cursor-pointer"
+                onClick={() => handleRedirect(tab.path)}
               >
-                {tab}
+                {tab.label}
               </div>
             ))}
             {/* <a

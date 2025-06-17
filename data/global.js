@@ -274,25 +274,28 @@ export const footerLinks = [
     items: [
       { label: "Our Story", path: "/our-story" },
       { label: "Shop Now", path: "/products" },
-      { label: "FAQs", path: "/#faqs" },
       { label: "Contact Us", path: "/contact-us" },
-      { label: "Customer Reviews", path: "/#reviews" },
+      { label: "FAQs", path: "/#faqs" },
     ],
   },
   {
     title: "Connect With Us",
     items: [
-      { label: "Instagram", path: "https://instagram.com" },
+      {
+        label: "Instagram",
+        path: "https://www.instagram.com/amma_ma_in_london?igsh=OG4zZHFyenJpcmV3&utm_source=qr",
+      },
       { label: "Facebook", path: "https://facebook.com" },
-      { label: "Twitter", path: "https://twitter.com" },
-      { label: "LinkedIn", path: "https://linkedin.com" },
+      { label: "Youtube", path: "https://www.youtube.com/@Amma-ma" },
+      // { label: "LinkedIn", path: "https://linkedin.com" },
+      // { label: "LinkedIn", path: "https://linkedin.com" },
       // { label: "Newsletter", path: "/newsletter" },
     ],
   },
   {
     title: "Stay Updated",
     items: [
-      { label: "Join Us", path: "/#join-us" },
+      // { label: "Join Us", path: "/#join-us" },
       // { label: "Subscribe Now", path: "/subscribe" },
       { label: "Latest News", path: "/coming-soon" },
       { label: "Special Offers", path: "/coming-soon" },

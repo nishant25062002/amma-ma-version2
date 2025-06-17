@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-width-1300 h-full">
         {/* Logo */}
         <div
-          className="relative w-14 h-6 md:w-20 md:h-8 cursor-pointer"
+          className="relative w-[3rem] h-[3rem] cursor-pointer"
           onClick={() => handleRedirect("/")}
         >
           <Image src={Logo} alt="Logo" fill />
