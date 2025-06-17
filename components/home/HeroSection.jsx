@@ -1,22 +1,35 @@
 import React from "react";
 import { Heading, Text } from "..";
-import { LadduInBowl } from "@/public";
+import { HomeBackground } from "@/public";
 import Image from "next/image";
 
-const HeroSection = () => {
+const HeroSection = ({ isMobile }) => {
   return (
-    <section className="hero-gradient w-full">
-      <div className="w-full flex flex-col items-center justify-center text-center gap-[0.5rem] pt-[1rem] md:pt-[8rem] max-w-7xl mx-auto">
-        <Heading as="h1" level="h1">
+    <section className="relative w-full h-[40rem] md:h-[96rem] flex text-center">
+      {/* Background Image */}
+      <Image
+        src={HomeBackground}
+        alt="Background"
+        fill
+        className="absolute object-cover z-[-10]"
+        quality={100}
+        priority
+      />
+
+      <div className="w-full flex flex-col items-center text-center gap-[0.5rem] pt-[3rem] md:pt-[8rem] max-w-7xl mx-auto z-[10]">
+        <Heading as={isMobile ? "h4" : "h1"} level={isMobile ? "h4" : "h1"}>
           Inspired by Grandmothers.
           <br /> Loved by Generations.
         </Heading>
-        <Text className="mt-[1.5rem]">
+        <Text
+          size={isMobile ? "small" : "regular"}
+          className="mt-[0.5rem] md:mt-[1.5rem]"
+        >
           Your body will thank you - because what you
           <br /> eat should heal, not harm.
         </Text>
 
-        <div className="w-full max-w-full md:w-[40rem]">
+        {/* <div className="w-full max-w-full md:w-[40rem]">
           <Image
             src={LadduInBowl}
             alt="Background"
@@ -24,7 +37,7 @@ const HeroSection = () => {
             quality={100}
             priority
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

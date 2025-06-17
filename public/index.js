@@ -20,6 +20,10 @@ import ComingSoon from "./assets/coming-soon.jpg";
 import LadduBowl from "./assets/laddu-in-bowl.jpg";
 import AmmaMa from "./assets/amma-ma.jpg";
 import LadduInBowl from "./assets/laddu-in-bowl-white.png";
+import HomeBackground from "./assets/home-background.png";
+import Nuts from "./assets/nuts.jpg";
+import Ragi from "./assets/ragi.jpg";
+import UradDal from "./assets/urad-dal.jpg";
 
 export {
   HeroBackground,
@@ -44,4 +48,8 @@ export {
   LadduBowl,
   AmmaMa,
   LadduInBowl,
+  HomeBackground,
+  Nuts,
+  Ragi,
+  UradDal,
 };

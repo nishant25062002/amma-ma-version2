@@ -35,3 +35,13 @@ html {
 .hero-gradient {
   background: radial-gradient(circle, #f1debe 0%, #f6e5c7 100%);
 }
+
+/* styles.css */
+.hero-gradient-extend {
+  background: conic-gradient(
+    from 135deg at 50% 50%,
+    #ffe9b9 0deg,
+    #fbda9a 88.27deg,
+    #ffe9b9 360deg
+  );
+}

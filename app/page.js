@@ -15,9 +15,19 @@ import {
   TrustBadgesSlider,
 } from "@/components";
 import { scrollToId } from "@/lib/scrollToId";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen width
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const pathname = window.location.pathname;
@@ -32,8 +42,8 @@ export default function Home() {
       <Navbar />
       <div className="h-[4.6rem]" />
 
-      <Hero />
-      <HeroSectionExtend />
+      <Hero isMobile={isMobile} />
+      <HeroSectionExtend isMobile={isMobile} />
       {/*  This section is not present in present version*/}
       {/* <BrandGrid /> */}
 
