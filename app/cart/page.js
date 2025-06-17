@@ -1,5 +1,10 @@
 // components/Cart.jsx
-import { CartSection, Footer, Navbar } from "@/components";
+import {
+  AllergenAdvisorySection,
+  CartSection,
+  Footer,
+  Navbar,
+} from "@/components";
 
 export default function Cart() {
   return (
@@ -9,6 +14,8 @@ export default function Cart() {
 
       {/* CartSection */}
       <CartSection />
+
+      <AllergenAdvisorySection className={"!pt-0"} />
 
       {/* Footer */}
       <Footer />

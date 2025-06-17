@@ -1,6 +1,11 @@
 "use client";
 
-import { Footer, Navbar, PaymentSection } from "@/components";
+import {
+  AllergenAdvisorySection,
+  Footer,
+  Navbar,
+  PaymentSection,
+} from "@/components";
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
 
@@ -17,6 +22,8 @@ export default function PaymentPage() {
       <div className="h-[4.6rem]" />
 
       <PaymentSection />
+
+      <AllergenAdvisorySection className={"!pt-0"} />
 
       <Footer />
     </main>

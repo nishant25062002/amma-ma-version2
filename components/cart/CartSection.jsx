@@ -29,7 +29,7 @@ const CartSection = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto py-[4rem] md:py-[6rem] px-4 md:px-10">
+    <section className="max-w-6xl mx-auto py-[4rem] md:py-[5rem] px-4 md:px-10">
       <Heading level="h2" className="mb-6">
         Your Cart
       </Heading>
