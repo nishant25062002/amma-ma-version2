@@ -36,6 +36,7 @@ export { default as SplitFeatureSection } from "./our-story/SplitFeatureSection"
 export { default as StoryFeatureSection } from "./our-story/FeatureSection";
 export { default as CommunityAudienceSection } from "./our-story/CommunityAudienceSection";
 export { default as StoryWithTimeline } from "./our-story/StoryWithTimeline";
+export { default as DescriptionSection } from "./our-story/DescriptionSection";
 
 // Contact-Us Components
 export { default as ContactSection } from "./contact-us/ContactSection";

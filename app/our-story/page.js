@@ -4,7 +4,7 @@ import {
   Footer,
   VideoSection,
   CtaSection,
-  StoryWithTimeline,
+  DescriptionSection,
 } from "@/components";
 
 export default function OurStoryPage() {
@@ -17,7 +17,8 @@ export default function OurStoryPage() {
       <VideoSection />
 
       {/* StoryWithTimeline */}
-      <StoryWithTimeline />
+      {/* <StoryWithTimeline /> */}
+      <DescriptionSection />
 
       {/* LegacySection */}
       {/* <LegacySection /> */}
