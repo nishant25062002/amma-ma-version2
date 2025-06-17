@@ -1,6 +1,7 @@
 // components/Text.jsx
 
 const fontSizes = {
+  macro: "text-[1.5rem] leading-[150%]", // 20px
   large: "text-[1.25rem] leading-[150%]", // 20px
   medium: "text-[1.125rem] leading-[150%]", // 18px
   regular: "text-[1rem] leading-[150%]", // 16px
@@ -21,7 +22,7 @@ const fontSizes = {
 
 // 👇 Map for font families
 const fontFamilies = {
-  protest: "font-Libre", // Protest Riot
+  libre: "font-Libre", // Protest Riot
   inter: "font-inter", // Inter
 };
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection = ({ isMobile }) => {
   return (
-    <section className="relative w-full h-[40rem] md:h-[96rem] flex text-center">
+    <section className="relative w-full h-[38rem] md:h-[100rem] flex text-center">
       {/* Background Image */}
       <Image
         src={HomeBackground}
@@ -22,8 +22,9 @@ const HeroSection = ({ isMobile }) => {
           <br /> Loved by Generations.
         </Heading>
         <Text
-          size={isMobile ? "small" : "regular"}
-          className="mt-[0.5rem] md:mt-[1.5rem]"
+          size={isMobile ? "small" : "large"}
+          className="mt-[0.5rem] md:mt-[1rem]"
+          family={"libre"}
         >
           Your body will thank you - because what you
           <br /> eat should heal, not harm.
