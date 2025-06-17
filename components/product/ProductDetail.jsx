@@ -6,6 +6,7 @@ import { Heading, Text, Button, Alert } from "@/components";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 const sizes = [
   { label: "500g", value: 500 },
@@ -30,6 +31,7 @@ export default function ProductDetail({ productDetails }) {
     }
     if (isPresentInCart) {
       dispatch(removeFromCart(id));
+      toast.success("Remove from Cart!");
     } else {
       dispatch(
         addToCart({
@@ -37,6 +39,7 @@ export default function ProductDetail({ productDetails }) {
           weight: selectedWeight,
         })
       );
+      toast.success("Added to Cart!");
     }
   };
 
@@ -132,15 +135,33 @@ export default function ProductDetail({ productDetails }) {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-1">
-            <input
-              type="number"
-              min={100}
-              placeholder="Custom"
-              className={`border-2 border-[#bbbbbb] px-4 py-2 text-[1rem] leading-[150%] w-[10rem] placeholder-[#bbbbbb]`}
-              onClick={(e) => setSelectedWeight(e.target.value)}
-            />
-            (in grams)
+          <div className="flex items-center gap-2">
+            <select
+              className={`border-2 border-[#bbbbbb] px-4 py-2 text-[1rem] leading-[150%] w-[12rem] text-[#333] ${
+                Number(selectedWeight) > 1000
+                  ? "bg-black text-white"
+                  : "bg-white text-black"
+              }`}
+              onChange={(e) => setSelectedWeight(e.target.value)}
+              value={selectedWeight || ""}
+            >
+              <option value="" disabled className="bg-white text-black">
+                Select Weight
+              </option>
+              {Array.from({ length: 8 }, (_, i) => {
+                const weight = (i + 3) * 500; // 1500 to 5000
+                return (
+                  <option
+                    key={weight}
+                    value={weight}
+                    className="bg-white text-black"
+                  >
+                    {weight} gms
+                  </option>
+                );
+              })}
+            </select>
+            <span>(in grams)</span>
           </div>
         </div>
 

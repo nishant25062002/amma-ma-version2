@@ -90,13 +90,18 @@ export default function ProductCard({
               {subtitle}
             </Text>
           </div>
-          <Text
-            size="large"
-            weight="semibold"
-            className="text-[#FDFDFD] group-hover:text-[#F9C000]"
-          >
-            £{price}
-          </Text>
+          <div>
+            <Text
+              size="large"
+              weight="semibold"
+              className="text-[#FDFDFD] group-hover:text-[#F9C000]"
+            >
+              £{price}
+            </Text>
+            <Text size="mini" className="text-[#c0c0c0]">
+              /500g
+            </Text>
+          </div>
         </div>
       </div>
       <Button

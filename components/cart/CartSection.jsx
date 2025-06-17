@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FiMinus } from "react-icons/fi";
 import { FiPlus } from "react-icons/fi";
+import { toast } from "sonner";
 
 const CartSection = () => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const CartSection = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-[4rem] md:py-[6rem] px-4 md:px-10">
+    <section className="max-w-6xl mx-auto py-[4rem] md:py-[6rem] px-4 md:px-10">
       <Heading level="h2" className="mb-6">
         Your Cart
       </Heading>
@@ -110,7 +111,10 @@ const CartSection = () => {
                   <Button
                     variant="outline"
                     secondary
-                    onClick={() => dispatch(removeFromCart(item.id))}
+                    onClick={() => {
+                      dispatch(removeFromCart(item.id));
+                      toast.success("Remove from Cart!");
+                    }}
                   >
                     Remove
                   </Button>

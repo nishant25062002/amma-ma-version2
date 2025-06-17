@@ -6,6 +6,7 @@ const fontSizes = {
   regular: "text-[1rem] leading-[150%]", // 16px
   small: "text-[0.875rem] leading-[150%]", // 14px
   tiny: "text-[0.75rem] leading-[150%]", // 12px
+  mini: "text-[0.6rem] leading-[150%]", // 12px
   micro: "text-[0.5rem] leading-[100%]", // 12px
 };
 
