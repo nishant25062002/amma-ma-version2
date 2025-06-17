@@ -21,7 +21,7 @@ export default function ProductsSection() {
             <Text
               size="regular"
               weight="semibold"
-              className="text-[#F9C000] mb-[1rem]"
+              className="text-[#D4A850] mb-[1rem]"
             >
               Delight
             </Text>

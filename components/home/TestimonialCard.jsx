@@ -14,7 +14,7 @@ export default function TestimonialCardV2({
     <div className="rounded-2xl border-[2px] border-black p-[2rem] max-w-md w-full mx-auto min-h-[15rem] flex flex-col justify-between">
       {/* Stars */}
       <div>
-        <div className="flex gap-1 text-[#F9C000] text-lg mb-4">
+        <div className="flex gap-1 text-[#D4A850] text-lg mb-4">
           {[...Array(rating)].map((_, i) => (
             <FaStar key={i} />
           ))}

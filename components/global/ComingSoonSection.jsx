@@ -22,7 +22,7 @@ const ComingSoonSection = () => {
         {`We’re working hard to bring something amazing for you. Stay tuned!`}
       </Text>
       <div className="flex items-center gap-2 ">
-        <span className="animate-pulse w-3 h-3 rounded-full bg-[#F9C000]" />
+        <span className="animate-pulse w-3 h-3 rounded-full bg-[#D4A850]" />
         <span className="text-sm text-gray-500 font-semibold">
           Launching soon
         </span>

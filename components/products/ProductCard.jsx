@@ -83,7 +83,7 @@ export default function ProductCard({
             >
               {title}
             </Heading>
-            <Text size="small" className="text-[#D4A850]">
+            <Text size="small" className="text-[#D4A850] italic">
               {subtitle}
             </Text>
           </div>

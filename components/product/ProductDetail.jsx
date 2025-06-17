@@ -194,7 +194,7 @@ export default function ProductDetail({ productDetails }) {
             Buy now
           </Button>
           <Text size="tiny" align="center" className="text-gray-500">
-            Free shipping over £50
+            Free shipping on all orders for a limited time only
           </Text>
         </div>
       </div>

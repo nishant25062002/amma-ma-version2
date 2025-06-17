@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full p-4 bg-[#0C4539] border-b-[0.25rem] border-[#D4A850] border-solid z-40 !h-[calc(4.6rem+0.25rem)]">
-      {/* #F9C000 */}
+      {/* #D4A850 */}
       <div className="flex items-center justify-between max-width-1300 h-full">
         {/* Logo */}
         <div
@@ -68,10 +68,10 @@ const Navbar = () => {
               className="flex flex-col md:flex-row md:items-center md:justify-center md:h-full z-100"
             >
               <button
-                className={`font-inter text-[#0C4539] md:text-[#FDFDFD] hover:text-[#F9C000] flex items-center gap-1 cursor-pointer ${
+                className={`font-inter text-[#0C4539] md:text-[#FDFDFD] hover:text-[#D4A850] flex items-center gap-1 cursor-pointer ${
                   pathname === data.path ||
                   (pathname.startsWith(data.path) && data.path !== "/")
-                    ? "!text-[#F9C000]"
+                    ? "!text-[#D4A850]"
                     : ""
                 }`}
                 onClick={() => handleRedirect(data.path)}
@@ -82,7 +82,7 @@ const Navbar = () => {
                 className={`hidden md:block absolute bottom-[-1px] rounded-4xl w-20 h-[4px] transition-all z-100 ${
                   pathname === data.path ||
                   (pathname.startsWith(data.path) && data.path !== "/")
-                    ? "bg-[#F9C000]"
+                    ? "bg-[#D4A850]"
                     : "bg-transparent"
                 }`}
               /> */}
@@ -105,7 +105,7 @@ const Navbar = () => {
             <div className="absolute -top-[1rem] -right-[0.5rem] text-[#0C4539] z-10 text-[0.75rem] h-[1.2rem] w-[1.3rem] rounded-full bg-[#fff] font-bold flex items-center justify-center">
               {cartItems.length}
             </div>
-            <HiShoppingCart className="text-2xl text-[#F9C000]" />
+            <HiShoppingCart className="text-2xl text-[#D4A850]" />
           </div>
 
           {/* Hamburger Menu & Dark mode button */}
