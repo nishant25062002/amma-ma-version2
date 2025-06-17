@@ -78,7 +78,7 @@ export default function TestimonialSection() {
         </Text>
       </div>
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-7xl mx-auto overflow-hidden">
         {/* Arrow Buttons */}
         <button
           onClick={slidePrev}

@@ -30,7 +30,7 @@ export const benefitHighlights = [
 
 const SuperSeedsCard = ({ data, isMobile }) => {
   return (
-    <div className="flex flex-col items-center md:items-start rounded-lg w-full">
+    <div className="flex flex-col items-center rounded-lg w-full">
       <div className="w-[10rem] h-[10rem] md:w-[15rem] md:h-[15rem] rounded-full border-[4px] border-[#D4A850] overflow-hidden relative">
         <Image
           src={data.image}
@@ -43,7 +43,7 @@ const SuperSeedsCard = ({ data, isMobile }) => {
         <Heading
           as={isMobile ? "h6" : "h4"}
           level={isMobile ? "h6" : "h4"}
-          className="w-full mt-[1.5rem]"
+          className="w-full mt-[1.5rem] flex min-h-[3rem]"
         >
           {data.title}
         </Heading>
@@ -68,7 +68,7 @@ const SuperSeedsCard = ({ data, isMobile }) => {
 const HeroSectionExtend = ({ isMobile }) => {
   return (
     <section className="hero-gradient-extend w-full">
-      <div className="w-full flex flex-col items-center justify-center text-center gap-[0.5rem] pt-[5rem] pb-[5rem] md:pb-[8rem] max-w-5xl mx-auto">
+      <div className="w-full flex flex-col items-center justify-center text-center gap-[0.5rem] pt-[5rem] pb-[5rem] md:pb-[8rem] max-w-6xl mx-auto">
         <div className="flex items-center gap-[0.5rem] md:gap-[2rem] w-full justify-center">
           <div className="bg-[#D4A850] w-1/5 md:w-1/4 h-[0.25rem] rounded-4xl" />
           <Heading as={isMobile ? "h4" : "h2"} level={isMobile ? "h4" : "h2"}>
