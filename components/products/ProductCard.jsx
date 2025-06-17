@@ -51,7 +51,7 @@ export default function ProductCard({
   }, [cartItems]);
 
   return (
-    <div className="flex flex-col overflow-hidden cursor-pointer hover:text-[#F9C000] transition group gap-[1rem]">
+    <div className="flex flex-col overflow-hidden cursor-pointer hover:text-[#D4A850] transition group gap-[1rem]">
       <div className="flex flex-col gap-[1rem]" onClick={handleRedirect}>
         {/* Image Container */}
         <div className="relative transition-all duration-250 ease-in-out h-[11.8rem] md:h-[22.5rem] overflow-hidden rounded-[1rem]">
@@ -79,14 +79,11 @@ export default function ProductCard({
               level="h6"
               family="poppins"
               weight="semibold"
-              className="text-[#FDFDFD]  group-hover:text-[#F9C000]"
+              className="text-[#FDFDFD]  group-hover:text-[#D4A850]"
             >
               {title}
             </Heading>
-            <Text
-              size="small"
-              className="text-[#F9C000] group-hover:text-[#F9C000]"
-            >
+            <Text size="small" className="text-[#D4A850]">
               {subtitle}
             </Text>
           </div>
@@ -94,7 +91,7 @@ export default function ProductCard({
             <Text
               size="large"
               weight="semibold"
-              className="text-[#FDFDFD] group-hover:text-[#F9C000]"
+              className="text-[#FDFDFD] group-hover:text-[#D4A850]"
             >
               £{price}
             </Text>

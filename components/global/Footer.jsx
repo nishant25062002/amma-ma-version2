@@ -44,7 +44,7 @@ export default function Footer() {
       <div className="max-width-1300 flex flex-col px-[1.25rem] md:px-0 md:flex-row gap-[2.5rem] !mb-[6.5rem]">
         {/* Logo */}
         <div className="w-[10.4rem]">
-          <div className="relative w-[3rem] h-[3rem] cursor-pointer">
+          <div className="relative w-[4.5rem] h-[4.5rem] cursor-pointer">
             <Image src={Logo} alt="Logo" fill />
           </div>
         </div>
