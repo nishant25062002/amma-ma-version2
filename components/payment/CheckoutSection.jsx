@@ -9,15 +9,14 @@ import {
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
 import { Button, Text } from "..";
 import { placeOrder } from "@/lib/api/orderApi";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
-import { clearCart } from "@/redux/slices/cartSlice";
 
 const CheckoutSection = ({ amount }) => {
   const router = useRouter();
   const stripe = useStripe();
   const elements = useElements();
-  const dispatch = useDispatch();
+
   const [errorMessage, setErrorMessage] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [loading, setLoading] = useState(false);
@@ -95,7 +94,6 @@ const CheckoutSection = ({ amount }) => {
 
       const orderResult = await placeOrder(orderData);
       console.log("✅ Order saved:", orderResult);
-      dispatch(clearCart());
       redirectToSuccessPage();
       // Optional: redirect manually
       // window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;
