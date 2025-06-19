@@ -197,9 +197,6 @@ const CheckoutSection = ({ amount }) => {
           required
         />
       </div>
-      {/* <label className="block text-sm font-medium text-gray-700 mb-1">
-          Gift Pack:
-        </label> */}
 
       <div className="flex flex-col items-start w-full gap-[0.25rem]">
         <Text size="small">Gift Pack:</Text>
@@ -231,12 +228,12 @@ const CheckoutSection = ({ amount }) => {
 
       {/* <Button onClick={separateFunction}>Submit Order</Button> */}
 
-      {/* {clientSecret && <PaymentElement />} */}
+      {clientSecret && <PaymentElement />}
 
       {errorMessage && <div>{errorMessage}</div>}
 
       <Button
-        // disabled={!stripe || loading}
+        disabled={!stripe || loading}
         className="text-white w-full mt-4 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
         secondary
       >
