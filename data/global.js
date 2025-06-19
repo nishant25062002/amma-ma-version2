@@ -100,6 +100,26 @@ export const productsData = [
     price: 14,
     photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
   },
+  {
+    number: 8,
+    id: "8",
+    image: Laddu,
+    title: "Test Product 1",
+    subtitle: "All-in-One Booster",
+    desc: "Boosts Test, Supports Test & Test health, Nourishes overall wellbeing, Family health pack.",
+    price: 0.15,
+    photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
+  },
+  {
+    number: 9,
+    id: "9",
+    image: Laddu,
+    title: "Test Product 2",
+    subtitle: "All-in-One Booster",
+    desc: "Boosts Test, Supports Test & Test health, Nourishes overall wellbeing, Family health pack.",
+    price: 0.15,
+    photos: [Laddu, Laddu, Laddu, Laddu, Laddu],
+  },
 ];
 
 // data/splitFeatureData.js

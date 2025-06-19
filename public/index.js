@@ -25,6 +25,7 @@ import Nuts from "./assets/nuts.jpg";
 import Ragi from "./assets/ragi.jpg";
 import UradDal from "./assets/urad-dal.jpg";
 import Logo from "./assets/logo.png";
+import LogoGold from "./assets/logo-gold.png";
 
 export {
   HeroBackground,
@@ -53,4 +54,5 @@ export {
   Nuts,
   Ragi,
   UradDal,
+  LogoGold,
 };

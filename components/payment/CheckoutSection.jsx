@@ -9,11 +9,15 @@ import {
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
 import { Button, Text } from "..";
 import { placeOrder } from "@/lib/api/orderApi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
+import { clearCart } from "@/redux/slices/cartSlice";
 
 const CheckoutSection = ({ amount }) => {
+  const router = useRouter();
   const stripe = useStripe();
   const elements = useElements();
+  const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,6 +28,11 @@ const CheckoutSection = ({ amount }) => {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+  const [giftPack, setGiftPack] = useState("No");
+
+  const redirectToSuccessPage = (orderId) => {
+    router.push(`/payment-success?orderId=${orderId}`);
+  };
 
   // name, email, address, phone add a form/ or input for these variables
 
@@ -80,13 +89,16 @@ const CheckoutSection = ({ amount }) => {
         email,
         address,
         phone,
+        giftPack,
+        totalPrice: amount,
       };
 
       const orderResult = await placeOrder(orderData);
       console.log("✅ Order saved:", orderResult);
-
+      dispatch(clearCart());
+      redirectToSuccessPage();
       // Optional: redirect manually
-      window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;
+      // window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;
     } catch (err) {
       console.error("❌ Order API error:", err.message);
       setErrorMessage("Payment successful but failed to save order.");
@@ -109,6 +121,29 @@ const CheckoutSection = ({ amount }) => {
       </div>
     );
   }
+
+  // const separateFunction = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const orderData = {
+  //       items: cartItems,
+  //       name,
+  //       email,
+  //       address,
+  //       phone,
+  //       giftPack,
+  //       totalPrice: amount,
+  //     };
+
+  //     const orderResult = await placeOrder(orderData);
+  //     console.log("✅ Order saved:", orderResult);
+  //     dispatch(clearCart());
+  //     redirectToSuccessPage(orderResult.order.orderId);
+  //   } catch (err) {
+  //     console.error("❌ Order API error:", err.message);
+  //     setErrorMessage("Payment successful but failed to save order.");
+  //   }
+  // };
 
   return (
     <form
@@ -150,6 +185,7 @@ const CheckoutSection = ({ amount }) => {
           />
         </div>
       </div>
+
       <div className="flex flex-col items-start w-full gap-[0.25rem]">
         <Text size="small">Delivery Address:</Text>
         <textarea
@@ -161,13 +197,46 @@ const CheckoutSection = ({ amount }) => {
           required
         />
       </div>
+      {/* <label className="block text-sm font-medium text-gray-700 mb-1">
+          Gift Pack:
+        </label> */}
 
-      {clientSecret && <PaymentElement />}
+      <div className="flex flex-col items-start w-full gap-[0.25rem]">
+        <Text size="small">Gift Pack:</Text>
+        <div className="flex gap-4">
+          <label className="flex items-center gap-2 text-[#000700] text-[1rem] justify-center cursor-pointer">
+            <input
+              type="radio"
+              name="giftPack"
+              value="Yes"
+              className="form-radio"
+              onChange={() => setGiftPack("Yes")}
+              checked={giftPack === "Yes"}
+            />
+            Yes
+          </label>
+          <label className="flex items-center gap-2 text-[#000700] text-[1rem] justify-center cursor-pointer">
+            <input
+              type="radio"
+              name="giftPack"
+              value="No"
+              className="form-radio"
+              onChange={() => setGiftPack("No")}
+              checked={giftPack === "No"}
+            />
+            No
+          </label>
+        </div>
+      </div>
+
+      {/* <Button onClick={separateFunction}>Submit Order</Button> */}
+
+      {/* {clientSecret && <PaymentElement />} */}
 
       {errorMessage && <div>{errorMessage}</div>}
 
       <Button
-        disabled={!stripe || loading}
+        // disabled={!stripe || loading}
         className="text-white w-full mt-4 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
         secondary
       >

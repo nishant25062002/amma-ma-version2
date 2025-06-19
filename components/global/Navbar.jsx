@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import { Logo } from "@/public";
+import { LogoGold } from "@/public";
 import { HiShoppingCart } from "react-icons/hi";
 import { useSelector } from "react-redux";
 
@@ -47,12 +47,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full p-4 bg-[#0C4539] border-b-[0.25rem] border-[#D4A850] border-solid z-40 !h-[calc(4.6rem+0.25rem)]">
       {/* #D4A850 */}
       <div className="flex items-center justify-between max-width-1300 h-full">
-        {/* Logo */}
+        {/* LogoGold */}
         <div
           className="relative w-[3rem] h-[3rem] cursor-pointer"
           onClick={() => handleRedirect("/")}
         >
-          <Image src={Logo} alt="Logo" fill />
+          <Image src={LogoGold} alt="Logo" fill />
         </div>
 
         <div

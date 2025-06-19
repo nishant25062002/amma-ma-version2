@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { Button, Text } from "..";
 import Image from "next/image";
-import { Logo } from "@/public";
+import { LogoGold } from "@/public";
 import { footerLinks } from "@/data/global";
 import { useRouter } from "next/navigation";
 
@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="w-[10.4rem]">
           <div className="relative w-[4.5rem] h-[4.5rem] cursor-pointer">
-            <Image src={Logo} alt="Logo" fill />
+            <Image src={LogoGold} alt="Logo" fill />
           </div>
         </div>
         {footerLinks.map((section, index) => (

@@ -31,7 +31,7 @@ export default function ProductDetail({ productDetails }) {
     }
     if (isPresentInCart) {
       dispatch(removeFromCart(id));
-      toast.success("Remove from Cart!");
+      toast.success("Removed from Cart!");
     } else {
       dispatch(
         addToCart({

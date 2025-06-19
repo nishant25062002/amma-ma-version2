@@ -55,7 +55,7 @@ const CartSection = () => {
                 className="flex flex-col md:flex-row items-center justify-between border p-4 rounded-xl shadow-sm w-full"
               >
                 <div className="flex items-center gap-4">
-                  <div className="relative h-[8rem] w-[10rem] overflow-hidden rounded-md bg-amber-50 flex items-center">
+                  <div className="relative h-[8rem] w-[10rem] md:h-[9rem] md:w-[12rem] overflow-hidden rounded-md bg-amber-50 flex items-center">
                     <Image
                       src={item.image}
                       alt={"Product Image"}
@@ -92,7 +92,7 @@ const CartSection = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-end text-right gap-3 mt-6 md:mt-0 w-full md:w-full">
+                <div className="flex flex-col items-end text-right gap-3 mt-6 md:mt-0 w-full md:w-fit">
                   <div className="flex flex-col">
                     <Text size="tiny" className="">
                       Total Price:{" "}
@@ -113,7 +113,7 @@ const CartSection = () => {
                     secondary
                     onClick={() => {
                       dispatch(removeFromCart(item.id));
-                      toast.success("Remove from Cart!");
+                      toast.success("Removed from Cart!");
                     }}
                   >
                     Remove
