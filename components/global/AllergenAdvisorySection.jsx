@@ -14,7 +14,7 @@ const AllergenAdvisorySection = ({ className }) => {
         <br />
         Advisory
       </Heading>
-      <Text align="center" size="medium" className="mb-[8rem]">
+      <Text align="center" size="medium" className="mb-[3rem]">
         Effective date: June 15, 2025
       </Text>
 

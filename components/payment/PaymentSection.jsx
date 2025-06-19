@@ -29,12 +29,10 @@ const PaymentSection = () => {
   }, [total]);
 
   return (
-    <section className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500 min-h-[30rem]">
+    <section className="max-w-6xl mx-auto p-10 text-white text-center border my-[3rem] md:my-[5rem] rounded-md bg-gradient-to-tr from-blue-500 to-purple-500 min-h-[30rem]">
       <div className="mb-10">
-        <Heading level="h3" className="text-[#000]">
-          Amma-ma Foods
-        </Heading>
-        <Heading level="h3" className="text-[#000]">
+        <Heading level="h3">
+          Amma-ma Foods <br />
           has requested <span className="font-bold">£{total}</span>
         </Heading>
       </div>

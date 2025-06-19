@@ -7,7 +7,9 @@ import {
   PaymentElement,
 } from "@stripe/react-stripe-js";
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
-import { Button } from "..";
+import { Button, Text } from "..";
+import { placeOrder } from "@/lib/api/orderApi";
+import { useSelector } from "react-redux";
 
 const CheckoutSection = ({ amount }) => {
   const stripe = useStripe();
@@ -15,6 +17,15 @@ const CheckoutSection = ({ amount }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [loading, setLoading] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
+
+  // Form fields
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState("");
+
+  // name, email, address, phone add a form/ or input for these variables
 
   useEffect(() => {
     fetch("/api/create-payment-intent", {
@@ -50,15 +61,35 @@ const CheckoutSection = ({ amount }) => {
       confirmParams: {
         return_url: `${window.location.origin}/payment-success?amount=${amount}`,
       },
+      redirect: "if_required",
     });
 
     if (error) {
       // This point is only reached if there's an immediate error when
       // confirming the payment. Show the error to your customer (for example, payment details incomplete)
       setErrorMessage(error.message);
-    } else {
-      // The payment UI automatically closes with a success animation.
-      // Your customer is redirected to your `return_url`.
+      setLoading(false);
+      return;
+    }
+
+    // ✅ Payment was successful – now call order API
+    try {
+      const orderData = {
+        items: cartItems,
+        name,
+        email,
+        address,
+        phone,
+      };
+
+      const orderResult = await placeOrder(orderData);
+      console.log("✅ Order saved:", orderResult);
+
+      // Optional: redirect manually
+      window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;
+    } catch (err) {
+      console.error("❌ Order API error:", err.message);
+      setErrorMessage("Payment successful but failed to save order.");
     }
 
     setLoading(false);
@@ -80,7 +111,57 @@ const CheckoutSection = ({ amount }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-md">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-6 md:p-10  rounded-md space-y-4"
+    >
+      <div className="flex flex-col md:flex-row gap-[1rem]">
+        <div className="flex flex-col items-start w-full gap-[0.25rem]">
+          <Text size="small">Full Name:</Text>
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="border border-gray-300 rounded-md shadow-sm px-4 py-3 hover:shadow-md transition w-full placeholder-[#898989] text-[#000700] text-[1rem] outline-none"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="flex flex-col items-start w-full gap-[0.25rem]">
+          <Text size="small">Email:</Text>
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="border border-gray-300 rounded-md shadow-sm px-4 py-3 hover:shadow-md transition w-full placeholder-[#898989] text-[#000700] text-[1rem] outline-none"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="flex flex-col items-start w-full gap-[0.25rem]">
+          <Text size="small">Phone Number:</Text>
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            className="border border-gray-300 rounded-md shadow-sm px-4 py-3 hover:shadow-md transition w-full placeholder-[#898989] text-[#000700] text-[1rem] outline-none"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+        </div>
+      </div>
+      <div className="flex flex-col items-start w-full gap-[0.25rem]">
+        <Text size="small">Delivery Address:</Text>
+        <textarea
+          type="text"
+          placeholder="Delivery Address"
+          className="border border-gray-300 rounded-md shadow-sm px-4 py-3 hover:shadow-md transition w-full placeholder-[#898989] text-[#000700] text-[1rem] outline-none"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          required
+        />
+      </div>
+
       {clientSecret && <PaymentElement />}
 
       {errorMessage && <div>{errorMessage}</div>}
