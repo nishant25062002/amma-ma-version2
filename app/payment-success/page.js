@@ -32,7 +32,7 @@ const PaymentSuccess = ({ searchParams: { orderId = "" } }) => {
     };
 
     getOrderDetails();
-  }, [orderId]);
+  }, [orderId, dispatch]);
 
   // const handleDownload = () => {
   //   console.log("receiptRef.current:", receiptRef.current);

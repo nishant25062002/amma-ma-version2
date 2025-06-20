@@ -93,7 +93,7 @@ const CheckoutSection = ({ amount }) => {
       };
 
       const orderResult = await placeOrder(orderData);
-      console.log("✅ Order saved:", orderResult);
+      // console.log("✅ Order saved:", orderResult);
       redirectToSuccessPage(orderResult.order.orderId);
       // Optional: redirect manually
       // window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;

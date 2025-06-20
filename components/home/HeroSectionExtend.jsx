@@ -6,21 +6,21 @@ import Image from "next/image";
 
 export const benefitHighlights = [
   {
-    title: "Super Seeds",
+    title: "Ancient Super Grain",
     points: [
       "Tradition-backed nourishment for strength and vitality. Urad dal is a time-honoured super grain, rich in plant-based protein, fiber, and iron. It supports muscle growth, gut health, and sustained energy levels, making it a perfect base for wholesome sweets.",
     ],
     image: UradDal,
   },
   {
-    title: "Pure Ingredients",
+    title: "Ragi (Finger Millet)",
     points: [
       "Ancient seeds of strength, balance, and immunity. One of the most powerful ancient grains—rich in calcium, iron, and fiber. Ragi strengthens bones, aids digestion, and fuels the body with lasting energy.",
     ],
     image: Ragi,
   },
   {
-    title: "Healthy Indulgence",
+    title: "Nuts & Seeds",
     points: [
       "A nourishing blend crafted for modern wellness. Our signature mix of almonds, pistachios, flax seeds, dates, pumpkin, and more delivers a powerhouse of vitamins, minerals, healthy fats, and antioxidants - designed to fuel your body, sharpen your mind, and satisfy guilt-free cravings.",
     ],

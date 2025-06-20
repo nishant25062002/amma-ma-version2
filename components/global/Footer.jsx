@@ -13,6 +13,9 @@ import Image from "next/image";
 import { LogoGold } from "@/public";
 import { footerLinks } from "@/data/global";
 import { useRouter } from "next/navigation";
+import { addSubscriber } from "@/lib/api/subscriberApi";
+import { toast } from "sonner";
+import { useState } from "react";
 
 const socialMediaData = [
   {
@@ -34,9 +37,26 @@ const socialMediaData = [
 
 export default function Footer() {
   const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleRedirect = (path) => {
     router.push(path);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    if (!email) toast.error("Please add email!");
+    try {
+      await addSubscriber({ email });
+      toast.message("Subscribed Successfully!");
+    } catch (err) {
+      console.error("❌ API error:", err.response.data.message, err);
+      toast.error(`Error: ${err.response.data.message}!`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -73,17 +93,22 @@ export default function Footer() {
             Join our newsletter for updates on our latest offerings and
             promotions.
           </Text>
-          <form className="flex flex-col sm:flex-row items-center gap-2 mb-2">
+          <form
+            className="flex flex-col sm:flex-row items-center gap-2 mb-2"
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               placeholder="Your Email"
+              onChange={(e) => setEmail(e.target.value)}
               className="!text-[#FDFDFD] w-full sm:w-auto flex-1 px-4 py-2 border-[#FDFDFD] !border-[2px] focus:outline-none !rounded-[0.75rem] font-inter"
             />
             <Button
               type="submit"
               className="!text-[#FDFDFD] border-[2px] !border-[#FDFDFD] !bg-transparent !hover:bg-gray-100 w-full md:w-fit"
+              disabled={loading}
             >
-              Subscribe
+              {loading ? "Loading..." : "Subscribe"}
             </Button>
           </form>
           <Text size="tiny" className="text-[#FDFDFD]">

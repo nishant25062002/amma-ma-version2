@@ -1,10 +1,31 @@
 // components/SubscribeSection.js
-
+"use client";
 import Image from "next/image";
 import { Button, Heading, Text } from "..";
 import { Laddu } from "@/public";
+import { useState } from "react";
+import { addSubscriber } from "@/lib/api/subscriberApi";
+import { toast } from "sonner";
 
 export default function SubscribeSection() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    if (!email) toast.error("Please add email!");
+    try {
+      await addSubscriber({ email });
+      toast.message("Subscribed Successfully!");
+    } catch (err) {
+      console.error("❌ API error:", err.response.data.message, err);
+      toast.error(`Error: ${err.response.data.message}!`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section
       className="bg-[#FDFDFD] py-[4rem] md:py-[7rem] px-[1.25rem]"
@@ -42,15 +63,24 @@ export default function SubscribeSection() {
           </Text>
 
           {/* Form */}
-          <form className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[1rem]">
+          <form
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[1rem]"
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               placeholder="Your email address"
+              onChange={(e) => setEmail(e.target.value)}
               className="px-4 py-2 rounded-md border border-white bg-transparent text-white placeholder-[#FDFDFDFDFDFD99] focus:outline-none focus:ring-2 focus:ring-green-400 w-full md:w-[23.8rem]"
               required
             />
-            <Button type="submit" variant="solid" className="w-full md:w-fit">
-              Sign Up
+            <Button
+              type="submit"
+              variant="solid"
+              className="w-full md:w-fit"
+              disabled={loading}
+            >
+              {loading ? "Loading..." : "Sign Up"}
             </Button>
           </form>
 
