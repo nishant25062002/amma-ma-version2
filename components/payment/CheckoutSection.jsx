@@ -30,7 +30,7 @@ const CheckoutSection = ({ amount }) => {
   const [giftPack, setGiftPack] = useState("No");
 
   const redirectToSuccessPage = (orderId) => {
-    router.push(`/payment-success?orderId=${orderId}`);
+    router.replace(`/payment-success?orderId=${orderId}`);
   };
 
   // name, email, address, phone add a form/ or input for these variables
@@ -94,7 +94,7 @@ const CheckoutSection = ({ amount }) => {
 
       const orderResult = await placeOrder(orderData);
       console.log("✅ Order saved:", orderResult);
-      redirectToSuccessPage();
+      redirectToSuccessPage(orderResult.order.orderId);
       // Optional: redirect manually
       // window.location.href = `/payment-success?orderId=${orderResult.order.orderId}`;
     } catch (err) {

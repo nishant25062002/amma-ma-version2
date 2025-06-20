@@ -4,9 +4,12 @@ import { getOrder } from "@/lib/api/orderApi";
 // import html2pdf from "html2pdf.js";
 import { QRCodeSVG } from "qrcode.react";
 import { Text } from "@/components";
+import { clearCart } from "@/redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
 // import html2canvas from "html2canvas";
 
 const PaymentSuccess = ({ searchParams: { orderId = "" } }) => {
+  const dispatch = useDispatch();
   const [orderDetails, setOrderDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const receiptRef = useRef();
@@ -14,6 +17,7 @@ const PaymentSuccess = ({ searchParams: { orderId = "" } }) => {
   const INVOICE_URL = `https://amma-ma-version2.vercel.app/payment-success?orderId=${orderId}`;
 
   useEffect(() => {
+    dispatch(clearCart());
     if (!orderId) return;
 
     const getOrderDetails = async () => {
