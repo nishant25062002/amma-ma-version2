@@ -12,6 +12,7 @@ export { default as ComingSoonSection } from "./global/ComingSoonSection";
 export { default as Alert } from "./global/popup/Alert";
 export { default as TrustBadgesSlider } from "./global/TrustBadgesSlider";
 export { default as AllergenAdvisorySection } from "./global/AllergenAdvisorySection";
+export { default as WhatsAppFloatingButton } from "./global/WhatsAppFloatingButton";
 
 // Home Components
 export { default as Hero } from "./home/HeroSection";
