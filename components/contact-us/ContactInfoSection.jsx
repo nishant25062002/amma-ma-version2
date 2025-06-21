@@ -25,13 +25,13 @@ export default function ContactInfoSection() {
     {
       icon: <HiOutlineMail className="text-xl" />,
       text: "Email",
-      value: "info@amma-mafoods.com",
+      value: "Reach us anytime",
       link: (
         <a
-          href="mailto:info@amma-mafoods.com"
+          href="mailto:ammamaorganic@gmail.com "
           className="text-[1rem] leading-[150%] text-black font-inter underline"
         >
-          info@amma-mafoods.com
+          ammamaorganic@gmail.com
         </a>
       ),
     },
@@ -41,10 +41,10 @@ export default function ContactInfoSection() {
       value: "Call us anytime",
       link: (
         <a
-          href="tel:+442012345678"
+          href="tel:+447442773435"
           className="text-[1rem] leading-[150%] text-black font-inter underline"
         >
-          +44 20 1234 5678
+          +44 74 4277 3435
         </a>
       ),
     },
@@ -91,14 +91,14 @@ export default function ContactInfoSection() {
 
         <div className="flex flex-col md:flex-row gap-[1rem] md:gap-[2rem] items-center justify-center w-full">
           <motion.div
-            className="flex flex-col w-full max-w-[25rem] gap-[2.5rem]"
+            className="flex flex-col md:flex-row w-full gap-[2.5rem]"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             {InfoData.map((data, index) => (
-              <div key={index} className="flex flex-col gap-[0.5rem]">
+              <div key={index} className="flex flex-col gap-[0.5rem] w-full">
                 <Heading as="h6" level="h6" className="flex items-center gap-2">
                   {data.icon}
                   {data.text}
@@ -110,7 +110,7 @@ export default function ContactInfoSection() {
           </motion.div>
 
           {/* Right Side - Map Image */}
-          <motion.div
+          {/* <motion.div
             className="flex-1 relative overflow-hidden w-full max-w-[50rem] mt-[1rem] md:mt-0"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ export default function ContactInfoSection() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
