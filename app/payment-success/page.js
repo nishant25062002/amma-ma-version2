@@ -23,7 +23,7 @@ const PaymentSuccess = ({ searchParams: { orderId = "" } }) => {
     const getOrderDetails = async () => {
       try {
         const res = await getOrder(orderId);
-        setOrderDetails(res);
+        setOrderDetails(res.data);
       } catch (err) {
         console.error("❌ Order API error:", err.message || err);
       } finally {
