@@ -10,7 +10,7 @@ import { toast } from "sonner";
 
 const sizes = [
   { label: "500g", value: 500 },
-  { label: "1000g", value: 1000 },
+  { label: "1 kg", value: 1000 },
 ];
 
 export default function ProductDetail({ productDetails }) {
@@ -37,6 +37,7 @@ export default function ProductDetail({ productDetails }) {
         addToCart({
           ...productDetails,
           weight: selectedWeight,
+          quantity,
         })
       );
       toast.success("Added to Cart!");
@@ -110,7 +111,7 @@ export default function ProductDetail({ productDetails }) {
       {/* Right */}
       <div className="flex flex-col gap-[1.5rem] md:min-w-[25rem] max-w-[25rem]">
         <Heading level="h4" as="h4">
-          £{productDetails?.price}
+          £{productDetails?.price * quantity * (selectedWeight / 500)}
         </Heading>
 
         <Text size="small" className="">

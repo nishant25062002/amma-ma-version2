@@ -68,12 +68,13 @@ const CartSection = () => {
                     </Heading>
                     <div className="flex gap-5">
                       <Text size="tiny">
-                        Price: <strong>£{item.price}</strong>
+                        Price:{" "}
+                        <strong>£{item.price * (item.weight / 500)}</strong>
                       </Text>
                       <Text size="tiny">
                         Weight:{" "}
                         <strong>
-                          {item.weight > 1000
+                          {item.weight > 500
                             ? `${item.weight / 1000} kg`
                             : item.weight + "grams"}
                         </strong>
@@ -102,14 +103,19 @@ const CartSection = () => {
                     <Text size="tiny" className="">
                       Total Price:{" "}
                       <strong>
-                        £{(item.price * item.quantity).toFixed(2)}
+                        £
+                        {(
+                          item.price *
+                          (item.weight / 500) *
+                          item.quantity
+                        ).toFixed(2)}
                       </strong>
                     </Text>
                     <Text size="tiny" className="">
                       Total Weight:{" "}
                       <strong>
                         {" "}
-                        {(item.weight * item.quantity).toFixed(2) > 1000
+                        {(item.weight * item.quantity).toFixed(2) > 500
                           ? `${
                               (item.weight * item.quantity).toFixed(2) / 1000
                             } kg`

@@ -53,7 +53,7 @@ const SuperSeedsCard = ({ data, isMobile }) => {
           <Text
             key={index}
             size={isMobile ? "small" : "regular"}
-            className="flex text-[#0C4539] w-full md:min-h-[16rem]"
+            className="flex text-[#0C4539] w-full md:min-h-[14rem] flex-1 text-justify"
           >
             {/* <TbPointFilled className="mr-2" /> */}
             {point}

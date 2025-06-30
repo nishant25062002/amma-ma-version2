@@ -127,9 +127,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row gap-[1.5rem] justify-center md:justify-normal !text-[#FDFDFD]">
             {[
               { label: "Allergen Advisory", path: "/allergen-advisory" },
-              { label: "Privacy Policy", path: "/" },
-              { label: "Terms of Service", path: "/" },
-              { label: "Cookie Settings", path: "/" },
+              { label: "Privacy Policy", path: "/privacy-policy" },
+              { label: "Terms of Service", path: "/terms-and-conditions" },
+              { label: "Cookie Settings", path: "/cookies-policy" },
             ].map((tab, index) => (
               <div
                 key={index}
@@ -176,13 +176,14 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto">
         <Text size="small" align="center" className="text-[#c5c5c5]">
-          Website built and managed by{" "}
+          {/* Website built and managed by{" "} */}
+          Built with 💖 by{" "}
           <a
             className="underline font-bold"
-            href="https://masternext-technologies.vercel.app/"
+            href="https://masternext.in/"
             target="_blank"
           >
-            MasterNext Technologies
+            MasterNext
           </a>
         </Text>
       </div>
