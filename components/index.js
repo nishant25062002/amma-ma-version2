@@ -13,6 +13,9 @@ export { default as Alert } from "./global/popup/Alert";
 export { default as TrustBadgesSlider } from "./global/TrustBadgesSlider";
 export { default as AllergenAdvisorySection } from "./global/AllergenAdvisorySection";
 export { default as WhatsAppFloatingButton } from "./global/WhatsAppFloatingButton";
+export { default as CookiesPolicySection } from "./global/CookiesPolicySection";
+export { default as TermsAndConditionsSection } from "./global/TermsAndConditionsSection";
+export { default as PrivacyPolicySection } from "./global/PrivacyPolicySection";
 
 // Home Components
 export { default as Hero } from "./home/HeroSection";
