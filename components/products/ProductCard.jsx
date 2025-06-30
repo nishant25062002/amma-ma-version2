@@ -104,6 +104,7 @@ export default function ProductCard({
       <Button
         variant={isPresentInCart ? "solid" : "outline"}
         onClick={handleAddToCart}
+        className="!text-xs md:!text-sm"
       >
         {isPresentInCart ? "Remove from Cart" : "Add to Cart"}
       </Button>

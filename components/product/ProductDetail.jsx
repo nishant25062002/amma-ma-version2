@@ -149,19 +149,19 @@ export default function ProductDetail({ productDetails }) {
                 Select Weight
               </option>
               {Array.from({ length: 8 }, (_, i) => {
-                const weight = (i + 3) * 500; // 1500 to 5000
+                const weight = (i + 3) * 0.5; // 1500 to 5000
                 return (
                   <option
                     key={weight}
-                    value={weight}
+                    value={weight * 1000}
                     className="bg-white text-black"
                   >
-                    {weight} gms
+                    {weight} kg
                   </option>
                 );
               })}
             </select>
-            <span>(in grams)</span>
+            <span>(in kg)</span>
           </div>
         </div>
 

@@ -71,7 +71,12 @@ const CartSection = () => {
                         Price: <strong>£{item.price}</strong>
                       </Text>
                       <Text size="tiny">
-                        Weight: <strong>{item.weight}grams</strong>
+                        Weight:{" "}
+                        <strong>
+                          {item.weight > 1000
+                            ? `${item.weight / 1000} kg`
+                            : item.weight + "grams"}
+                        </strong>
                       </Text>
                     </div>
                     <div className="flex items-center gap-2 mt-4">
@@ -103,7 +108,12 @@ const CartSection = () => {
                     <Text size="tiny" className="">
                       Total Weight:{" "}
                       <strong>
-                        {(item.weight * item.quantity).toFixed(2)}grams
+                        {" "}
+                        {(item.weight * item.quantity).toFixed(2) > 1000
+                          ? `${
+                              (item.weight * item.quantity).toFixed(2) / 1000
+                            } kg`
+                          : (item.weight * item.quantity).toFixed(2) + "grams"}
                       </strong>
                     </Text>
                   </div>

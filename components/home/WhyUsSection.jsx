@@ -6,8 +6,15 @@ import { Heading, Text, Button } from "@/components";
 import { HeartIcon, ShieldIcon, UserIcon } from "@/public";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function WhyUsSection() {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/products#faqs");
+  };
+
   return (
     <section className="py-[4rem] md:py-[7rem] px-4 md:px-10 max-w-7xl mx-auto flex flex-col gap-[3rem] md:gap-[5rem]">
       {/* Header and Description */}
@@ -113,7 +120,12 @@ export default function WhyUsSection() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <Button variant="outline" className="w-fit" secondary>
+        <Button
+          variant="outline"
+          className="w-fit"
+          secondary
+          onClick={handleRedirect}
+        >
           Order Now
         </Button>
       </motion.div>

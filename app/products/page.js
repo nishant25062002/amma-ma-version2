@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Navbar,
   ProductsSection,
@@ -6,8 +8,19 @@ import {
   Footer,
   WhyUsSection,
 } from "@/components";
+import { scrollToId } from "@/lib/scrollToId";
+import { useEffect } from "react";
 
 export default function ProductsPage() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const pathname = window.location.pathname;
+      const segments = pathname.split("/").filter(Boolean);
+      const id = segments[segments.length - 1];
+      scrollToId(id);
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
