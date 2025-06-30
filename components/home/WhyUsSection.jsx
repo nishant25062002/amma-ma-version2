@@ -12,7 +12,7 @@ export default function WhyUsSection() {
   const router = useRouter();
 
   const handleRedirect = () => {
-    router.push("/products#faqs");
+    router.push("/products#products");
   };
 
   return (
