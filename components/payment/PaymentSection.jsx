@@ -18,7 +18,7 @@ const PaymentSection = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
   const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * (item.weight / 500) * item.quantity,
     0
   );
 
