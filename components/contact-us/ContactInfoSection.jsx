@@ -51,7 +51,7 @@ export default function ContactInfoSection() {
     {
       icon: <HiOutlineLocationMarker className="text-xl" />,
       text: "Email",
-      value: "456 Sweet Lane, London, UK",
+      value: `4 Windermere Gardens, Ilford, England, IG4 5BZ`,
       link: (
         <a
           href="https://www.google.com/maps"
